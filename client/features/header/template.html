@@ -3,8 +3,8 @@
     <div class="header-the-rest">
         <h1>David Miles</h1>
 
-        <div data-bind="foreach: sections" class="header-sections">
-            <div data-bind="text:text, click: select, css: {selected : selected()}" class="header-section"></div>
-        </div>
+        <paper-tabs data-bind="foreach: sections, attr:{selected:selectedIndex}" class="transparent-teal header-sections" role="tablist" horizontal center layout>
+            <paper-tab data-bind="text:text, click: select, css: {'core-selected' : selected()}, attr: {active:selected}" role="tab" inline flex center-center horizontal layout></paper-tab>
+        </paper-tabs>
     </div>
 </div>

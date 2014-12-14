@@ -1,0 +1,7 @@
+paper-tabs::shadow #selectionBar {
+    background-color: gray;
+}
+
+paper-tabs paper-tab::shadow #ink {
+    color: gray;
+}

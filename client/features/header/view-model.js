@@ -33,9 +33,14 @@ var viewModel = {
             };
         });
         var selected = localStorage.getItem('selected-section') || 'Foto';
-        this.sections.forEach(function(section) {
-            section.selected(section.text() === selected);
+        this.selectedIndex = ko.observable(0);
+        this.sections.forEach(function(section, index) {
+            if (section.text() === selected) {
+                section.selected(true);
+                self.selectedIndex(index);
+            }
         });
+
 
     }
 };
