@@ -1,0 +1,71 @@
+.site {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.site-header {
+}
+
+.site-footer {
+}
+
+.site-content {
+    flex: 1;
+}
+
+figure {
+    height: 200px;
+    float: left;
+    margin: 0px;
+}
+
+.singleBarChart {
+    margin: 20px 5px 5px 5px;
+}
+
+.chartTitle {
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    font-family: arial, sans-serif;
+    font-size: smaller;
+    background-color: #aaaaaa;
+    color: white;
+    margin: 0 10px 0 10px;
+}
+
+.lineChart {
+    width: 100%;
+}
+
+.charts {
+    cursor: pointer;
+}
+
+.clear {
+    clear: both;
+}
+
+#clickHint {
+    visibility: hidden;
+    background-image: url("../img/arrow_up.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 90px;
+    height: 110px;
+    margin-left: 100px;
+}
+
+#clickHintText {
+    color: white;
+    position: relative;
+    top: 40px;
+    left: 0px;
+    -ms-transform: rotate(270deg); /* IE 9 */
+    -moz-transform: rotate(270deg); /* Firefox */
+    -webkit-transform: rotate(270deg); /* Safari and Chrome */
+    -o-transform: rotate(270deg); /* Opera */
+}

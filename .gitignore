@@ -1,0 +1,7 @@
+.idea
+.*.swp
+builds
+node_modules
+tmp
+*.iml
+npm-debug.log

@@ -1,0 +1,12 @@
+{
+  "name": "charts",
+  "version": "0.0.0",
+  "author": {
+    "name": "Markus Andersson",
+    "email": "markus.andersson@mobenga.com"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "cogwheels-tools": "http://cogwheels.mobenga.net/releases/cogwheels-tools-npm-v1.0.0.tar.gz"
+  }
+}
