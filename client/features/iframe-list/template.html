@@ -1,0 +1,8 @@
+<loading params="visible:!loaded()"></loading>
+<div class="iFrames" data-bind="foreach: {data: items, afterRender: afterRender}, visible:loaded">
+    <iframe class="iFrame"
+            data-bind="attr: {src: url, width: width, height: height}, css: {'iFrame-loaded':loaded()}"
+            frameborder="0"
+            allowtransparency="true">
+    </iframe>
+</div>

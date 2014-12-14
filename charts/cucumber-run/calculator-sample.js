@@ -1,3 +1,0 @@
-/* global cogwheels */
-
-cogwheels.start();
