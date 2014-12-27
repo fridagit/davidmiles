@@ -1,5 +1,3 @@
-var router = require('router');
-var webStorage = require('web-storage');
 var bus = require('message-bus');
 
 var viewModel = {

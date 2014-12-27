@@ -93,6 +93,18 @@ html {
     box-shadow: 10px 10px 10px gray;
 }
 
+.videos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.video {
+    margin: 20px;
+    flex-shrink: 0;
+    box-shadow: 10px 10px 10px gray;
+}
+
 #header {
     padding-bottom: 40px;
 }
