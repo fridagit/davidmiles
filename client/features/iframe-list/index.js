@@ -1,7 +1,7 @@
 var template = require('./template');
 var viewModel = require('./view-model');
 
-exports.init = function(){
+exports.init = function () {
     ko.components.register('iframe-list', component);
 };
 

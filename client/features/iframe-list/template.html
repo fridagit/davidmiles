@@ -1,8 +1,5 @@
-<loading params="visible:!loaded()"></loading>
-<div class="iFrames" data-bind="foreach: {data: items, afterRender: afterRender}, visible:loaded">
-    <iframe class="iFrame"
-            data-bind="attr: {src: url, width: width, height: height}, css: {'iFrame-loaded':loaded()}"
-            frameborder="0"
-            allowtransparency="true">
-    </iframe>
+<div class="lazyIFrames" data-bind="foreach: items">
+    <div class="lazyIFrame" data-bind="style: {backgroundImage: image, width: width, height: height}">
+        <div data-bind="click: click, text: title, css: $parent.playIconClass"></div>
+    </div>
 </div>
