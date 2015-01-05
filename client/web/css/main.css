@@ -26,9 +26,9 @@ html {
     flex-grow: 0;
 }
 
-.header-content {
-    display: flex;
-    justify-content: center;
+#title {
+    font-size: xx-large;
+    color: dimgray;
 }
 
 .small {

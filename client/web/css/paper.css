@@ -6,3 +6,8 @@ core-scaffold::shadow core-toolbar {
 #navheader {
     background-color: lightgray;
 }
+
+.card {
+    display: inline-block;
+    margin: 20px;
+}

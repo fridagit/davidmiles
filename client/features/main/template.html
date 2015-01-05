@@ -1,17 +1,17 @@
 <core-scaffold>
 
-    <core-header-panel navigation flex>
+    <core-header-panel navigation  flex>
         <core-toolbar id="navheader">
             <span>Meny</span>
         </core-toolbar>
         <core-menu selected="1">
             <core-submenu icon="av:artist" label="Trubaduren">
-                <core-item label="Topic 1"></core-item>
-                <core-item label="Topic 2"></core-item>
+                <core-item label="Topic 1"><paper-ripple fit/></core-item>
+                <core-item label="Topic 2"><paper-ripple fit/></core-item>
             </core-submenu>
 
             <core-submenu data-bind="foreach: sections, attr:{selected:selectedIndex}" icon="av:queue-music" label="Låtskrivaren">
-                <core-item data-bind="click: select, css: {'core-selected' : selected()}, attr: {active: selected, label: text}"></core-item>
+                <core-item data-bind="click: select, css: {'core-selected' : selected()}, attr: {active: selected, label: text}"><paper-ripple fit/></core-item>
             </core-submenu>
         </core-menu>
     </core-header-panel>
