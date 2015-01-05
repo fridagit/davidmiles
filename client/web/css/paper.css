@@ -3,11 +3,32 @@ core-scaffold::shadow core-toolbar {
     color: black;
 }
 
+core-item.core-selected {
+    color: darkred;
+}
+
+paper-ripple {
+    color: darkred;
+}
+
 #navheader {
-    background-color: lightgray;
+    background-color: white;
 }
 
 .card {
     display: inline-block;
     margin: 20px;
+}
+
+.card img {
+    margin-bottom: -3px;
+}
+
+
+core-scaffold::shadow core-drawer-panel::shadow ::content[select="[drawer]"] > * {
+    box-shadow: none;
+}
+
+core-scaffold > core-header-panel::shadow #mainPanel {
+    border-top: 1px solid lightgray;
 }

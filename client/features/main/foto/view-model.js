@@ -1,13 +1,14 @@
 var viewModel = {
     init: function () {
-        var images = [
-            {url: 'affisch_300', width: '239px', height: '300px'},
-            {url: 'affisch_300', width: '239px', height: '300px'}
-        ];
-        images.forEach(function (image) {
-            image.url = 'url(img/' + image.url + '.jpg)';
-
-        });
+        var images = [];
+        for (var i = 1; i <= 22; i++) {
+            images.push(
+                {
+                    thumb: 'img/press/david_press_' + i + '_thumbnail.jpg',
+                    url: 'img/press/david_press_' + i + '.jpg'
+                }
+            );
+        }
         this.images = images;
     }
 };
