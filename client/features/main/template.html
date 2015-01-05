@@ -1,1 +1,34 @@
-<div class="grow" data-bind="component: {name: mainContent}"></div>
+<core-scaffold>
+
+    <core-header-panel navigation flex>
+        <core-toolbar id="navheader">
+            <span>Meny</span>
+        </core-toolbar>
+        <core-menu selected="1">
+            <core-submenu icon="av:artist" label="Trubaduren">
+                <core-item label="Topic 1"></core-item>
+                <core-item label="Topic 2"></core-item>
+            </core-submenu>
+
+            <core-submenu data-bind="foreach: sections, attr:{selected:selectedIndex}" icon="av:queue-music" label="Låtskrivaren">
+                <core-item data-bind="click: select, css: {'core-selected' : selected()}, attr: {active: selected, label: text}"></core-item>
+            </core-submenu>
+        </core-menu>
+    </core-header-panel>
+
+    <div id="title" tool><core-icon class="small" src="/img/guitar.jpg"></core-icon>David Miles</div>
+
+    <div class="content">
+        <div class="site">
+
+            <div class="site-content">
+                <div class="grow" data-bind="component: {name: mainContent}"></div>
+            </div>
+
+            <footer id="footer" class="do-not-grow">
+                Skapad av Johan Frick
+            </footer>
+
+        </div>
+    </div>
+</core-scaffold>

@@ -1,7 +1,8 @@
-paper-tabs::shadow #selectionBar {
-    background-color: gray;
+core-scaffold::shadow core-toolbar {
+    background: white;
+    color: black;
 }
 
-paper-tabs paper-tab::shadow #ink {
-    color: gray;
+#navheader {
+    background-color: lightgray;
 }

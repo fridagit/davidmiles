@@ -31,12 +31,21 @@ html {
     justify-content: center;
 }
 
+.small {
+    width: 50px;
+    height: 22px;
+    margin: 0 15px 10px 0;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -moz-transform: rotate(45deg); /* Firefox */
+    -webkit-transform: rotate(45deg); /* Safari and Chrome */
+    -o-transform: rotate(45deg); /* Opera */
+}
+
 .logo {
-    background-image: url('/img/guitar.jpg');
     margin: 20px 0 50px 0;
     width: 150px;
     height: 67px;
-    background-repeat: no-repeat;
+    background: url('/img/guitar.jpg') no-repeat;
 
     -ms-transform: rotate(45deg); /* IE 9 */
     -moz-transform: rotate(45deg); /* Firefox */
