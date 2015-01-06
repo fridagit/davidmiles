@@ -3,7 +3,7 @@ var template = require('./template');
 var viewModel = require('./view-model');
 
 exports.init = function() {
-    ['album','foto','video'].forEach(function(name) {
+    ['album','foto','video', 'erbjuder'].forEach(function(name) {
         var component = require('./' + name).component;
         ko.components.register(name, component);
     });
