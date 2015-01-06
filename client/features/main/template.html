@@ -3,14 +3,21 @@
     <core-header-panel navigation flex mode="seamed">
         <core-toolbar id="navheader">
         </core-toolbar>
-        <core-menu data-bind="foreach: sections, attr:{selected:selectedSectionIndex}">
-            <core-submenu data-bind="foreach: subSections, attr:{selected: $parent.selectedSubIndex, label: text}">
-                <core-item data-bind="click: select, css: {'core-selected' : selected()}, attr: {active: selected, label: text}"><paper-ripple fit/></core-item>
-            </core-submenu>
-        </core-menu>
+        <div class="menu" data-bind="foreach: sections">
+            <div class="item" data-bind="click: select, css: {'item-selected' : selected()}">
+                <div fit="" data-bind="text: text"></div>
+                <!--ko if:!disabled-->
+                <paper-ripple fit=""></paper-ripple>
+                <!--/ko-->
+            </div>
+        </div>
     </core-header-panel>
 
-    <div id="title" tool><img src="/img/logo.jpg" class="logo" width="56" height="75"><div>DAVID MILES</div></div>
+    <div id="title" tool>
+        <img src="/img/logo.jpg" class="logo" width="56" height="75"/>
+
+        <div>DAVID MILES</div>
+    </div>
 
     <div class="content" fit>
         <div class="site">

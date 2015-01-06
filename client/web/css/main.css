@@ -41,7 +41,7 @@ html {
     vertical-align: middle;
 }
 #title div {
-    margin-left: -80px;
+    margin-left: -100px;
     display: inline-block;
     transform:scale(0.6,1); /* W3C */
     -webkit-transform:scale(0.6,1); /* Safari and Chrome */

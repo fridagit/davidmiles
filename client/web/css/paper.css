@@ -3,7 +3,18 @@ core-scaffold::shadow core-toolbar {
     color: black;
 }
 
-core-item.core-selected {
+.menu {
+    display: inline-block;
+    width: 100%;
+    margin: 30px;
+}
+
+.item {
+    position: relative;
+    height: 28px;
+}
+
+.item-selected {
     color: darkred;
 }
 
