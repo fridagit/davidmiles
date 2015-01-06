@@ -49,15 +49,10 @@ paper-ripple {
     margin-bottom: -3px;
 }
 
-core-scaffold::shadow core-drawer-panel {
-    box-shadow: 5px 0 50px 0px rgba(0, 0, 0, 0.26);
-}
 
 core-scaffold::shadow core-drawer-panel::shadow ::content[select="[drawer]"] > * {
     box-shadow: none;
 }
-
-
 
 core-scaffold > core-header-panel::shadow #mainPanel {
     border-top: 1px solid lightgray;
