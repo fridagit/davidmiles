@@ -1,5 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
-
+@import url('http://fonts.googleapis.com/css?family=Fjalla+One');
 body {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     color: dimgray;
@@ -31,17 +31,28 @@ html {
 }
 
 #title {
-    font-size: 6.1em;
+    font-family: 'Fjalla One', 'Yanone Kaffeesatz', sans-serif;
+    font-size: 4.3em;
     color: dimgray;
-    margin-top: 45px;
+    margin-top: 65px;
 }
 
-#title img,span {
+#title img {
+    vertical-align: middle;
+}
+#title div {
+    margin-left: -80px;
+    display: inline-block;
+    transform:scale(0.6,1); /* W3C */
+    -webkit-transform:scale(0.6,1); /* Safari and Chrome */
+    -moz-transform:scale(0.6,1); /* Firefox */
+    -ms-transform:scale(0.6,1); /* IE 9 */
+    -o-transform:scale(0.6,1); /* Opera */
     vertical-align: middle;
 }
 
 .logo {
-    padding: 5px 5px 0 0;
+    padding-bottom: 7px;
 }
 
 .header-the-rest {
