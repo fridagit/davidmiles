@@ -4,15 +4,15 @@
         <core-toolbar id="navheader">
         </core-toolbar>
         <core-menu data-bind="foreach: sections, attr:{selected:selectedSectionIndex}">
-            <core-submenu data-bind="foreach: subSections, attr:{selected: $parent.selectedSubIndex, label: text, icon: icon}">
+            <core-submenu data-bind="foreach: subSections, attr:{selected: $parent.selectedSubIndex, label: text}">
                 <core-item data-bind="click: select, css: {'core-selected' : selected()}, attr: {active: selected, label: text}"><paper-ripple fit/></core-item>
             </core-submenu>
         </core-menu>
     </core-header-panel>
 
-    <div id="title" tool><core-icon class="small" src="/img/guitar.jpg"></core-icon>David Miles</div>
+    <div id="title" tool><img src="/img/logo.jpg" class="logo" width="69" height="90"><span>DAVID MILES</span></div>
 
-    <div class="content">
+    <div class="content" fit>
         <div class="site">
 
             <div class="site-content">

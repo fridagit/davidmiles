@@ -17,9 +17,12 @@ function showIFrame(item, event) {
     }
     iframe.setAttribute('src', iframeUrl);
     iframe.setAttribute('frameborder', '0');
-    iframe.style.width = element.style.width;
-    iframe.style.height = element.style.height;
-    element.parentNode.replaceChild(iframe, element);
+    if (item.fill) {
+        iframe.style.width = element.parentElement.style.width;
+        iframe.style.height = element.parentElement.style.height;
+    }
+    element.replaceChild(iframe, element.querySelector('.replaceMe'));
+    element.className = 'play';
 }
 
 module.exports.create = function (params) {

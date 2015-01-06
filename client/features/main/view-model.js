@@ -21,9 +21,9 @@ function createSections(self) {
             subSections: ['Erbjuder', 'Kontakt']
         },
         {
-            text: 'Låtskrivaren',
+            text: 'Artisten',
             icon: 'av:queue-music',
-            subSections: ['Foto', 'Album', 'Video']
+            subSections: ['Foto', 'Discografi', 'Video']
         }
     ];
 

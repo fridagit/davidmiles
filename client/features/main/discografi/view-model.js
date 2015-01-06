@@ -2,7 +2,7 @@ var request = require('utils/request');
 
 var viewModel = {
     init: function () {
-        var ids = ['5nrPJLz8D9BAwBkUYyISWi', '5RyzFjnNSYWYHdP5Nn9SDp', '5jo9tWCGshEon2Dt7a9EO7'];
+        var ids = ['5nrPJLz8D9BAwBkUYyISWi', '5RyzFjnNSYWYHdP5Nn9SDp', '5jo9tWCGshEon2Dt7a9EO7', '522oMBIoc9vQ6urmx5E6mG'];
         this.albums = ids.map(function (id) {
             var album = {
                 id: id,

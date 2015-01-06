@@ -31,30 +31,17 @@ html {
 }
 
 #title {
-    font-size: xx-large;
+    font-size: 6.1em;
     color: dimgray;
+    margin-top: 45px;
 }
 
-.small {
-    width: 50px;
-    height: 22px;
-    margin: 0 15px 10px 0;
-    -ms-transform: rotate(45deg); /* IE 9 */
-    -moz-transform: rotate(45deg); /* Firefox */
-    -webkit-transform: rotate(45deg); /* Safari and Chrome */
-    -o-transform: rotate(45deg); /* Opera */
+#title img,span {
+    vertical-align: middle;
 }
 
 .logo {
-    margin: 20px 0 50px 0;
-    width: 150px;
-    height: 67px;
-    background: url('/img/guitar.jpg') no-repeat;
-
-    -ms-transform: rotate(45deg); /* IE 9 */
-    -moz-transform: rotate(45deg); /* Firefox */
-    -webkit-transform: rotate(45deg); /* Safari and Chrome */
-    -o-transform: rotate(45deg); /* Opera */
+    padding: 5px 5px 0 0;
 }
 
 .header-the-rest {

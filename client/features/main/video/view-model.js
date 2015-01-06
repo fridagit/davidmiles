@@ -10,7 +10,8 @@ var viewModel = {
                 image: 'url(http://i.ytimg.com/vi/' + id + '/mqdefault.jpg)',
                 title: ko.observable(),
                 width: '320px',
-                height: '180px'
+                height: '180px',
+                fill: true
             };
             request('GET', 'http://gdata.youtube.com/feeds/api/videos/' + video.id + '?alt=json').end(function (result) {
                 video.title(result.body.entry.title.$t);
