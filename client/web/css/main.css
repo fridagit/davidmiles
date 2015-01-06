@@ -1,5 +1,6 @@
 @import url('http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
 @import url('http://fonts.googleapis.com/css?family=Fjalla+One');
+
 body {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     color: dimgray;
@@ -22,14 +23,6 @@ html {
     border-top: 1px solid lightgray;
 }
 
-.grow {
-    flex-grow: 1;
-}
-
-.do-not-grow {
-    flex-grow: 0;
-}
-
 #title {
     font-family: 'Fjalla One', 'Yanone Kaffeesatz', sans-serif;
     font-size: 4.3em;
@@ -40,14 +33,15 @@ html {
 #title img {
     vertical-align: middle;
 }
+
 #title div {
     margin-left: -100px;
     display: inline-block;
-    transform:scale(0.6,1); /* W3C */
-    -webkit-transform:scale(0.6,1); /* Safari and Chrome */
-    -moz-transform:scale(0.6,1); /* Firefox */
-    -ms-transform:scale(0.6,1); /* IE 9 */
-    -o-transform:scale(0.6,1); /* Opera */
+    transform: scale(0.6, 1); /* W3C */
+    -webkit-transform: scale(0.6, 1); /* Safari and Chrome */
+    -moz-transform: scale(0.6, 1); /* Firefox */
+    -ms-transform: scale(0.6, 1); /* IE 9 */
+    -o-transform: scale(0.6, 1); /* Opera */
     vertical-align: middle;
 }
 
@@ -55,39 +49,20 @@ html {
     padding-bottom: 7px;
 }
 
-.header-the-rest {
-    display: flex;
-    flex-direction: column;
-}
-
-.header-sections {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: x-large;
-}
-
-.header-section {
-    padding: 5px;
-}
-
-.header-section:hover {
-    background-color: lightgray;
-}
-
 .selected {
     color: #2e2e2e;
 }
 
 .site-content {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
     overflow: scroll;
+    padding: 10px;
+    width: 600px;
 }
 
 .photos {
     text-align: center;
 }
+
 #header {
     padding-bottom: 40px;
 }
@@ -95,4 +70,8 @@ html {
 #footer {
     padding: 10px;
     text-align: right;
+}
+
+.ham {
+    background-color: white;
 }

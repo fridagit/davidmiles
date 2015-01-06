@@ -1,10 +1,13 @@
 [
   {
-    "text": "HEM"
+    "text": "Hem"
+  },
+  {
+    "text": "Spelplan"
   },
   {
     "text": "ARTISTEN",
-    "disabled": true
+    "header": true
   },
   {
     "text": "Discografi"
@@ -35,7 +38,7 @@
   },
   {
     "text": "TRUBADUREN",
-    "disabled": true
+    "header": true
   },
   {
     "text": "Bilder"
@@ -48,8 +51,5 @@
   },
   {
     "text": "Referenser"
-  },
-  {
-    "text": "SPELPLAN"
   }
 ]

@@ -1,6 +1,6 @@
 var request = require('utils/request');
 
-var viewModel = {
+module.exports = {
     init: function () {
         var ids = ['5nMKfLtT9YU', 'WDnrjwN5X5I', 'ABF7PrYchNQ', 'AXf7meAEQnU'];
         this.videos = ids.map(function (id) {
@@ -19,10 +19,4 @@ var viewModel = {
             return video;
         });
     }
-};
-
-module.exports.create = function () {
-    var vm = Object.create(viewModel);
-    vm.init();
-    return vm;
 };

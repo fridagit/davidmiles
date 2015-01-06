@@ -4,9 +4,9 @@
         <core-toolbar id="navheader">
         </core-toolbar>
         <div class="menu" data-bind="foreach: sections">
-            <div class="item" data-bind="click: select, css: {'item-selected' : selected()}">
+            <div class="item" data-bind="click: select, css: {'item-selected' : selected(), 'menu-header': header}">
                 <div fit="" data-bind="text: text"></div>
-                <!--ko if:!disabled-->
+                <!--ko if:!header-->
                 <paper-ripple fit=""></paper-ripple>
                 <!--/ko-->
             </div>
@@ -23,10 +23,10 @@
         <div class="site">
 
             <div class="site-content">
-                <div class="grow" data-bind="component: {name: mainContent}"></div>
+                <div data-bind="component: {name: mainContent}"></div>
             </div>
 
-            <footer id="footer" class="do-not-grow">
+            <footer id="footer">
                 <!--Skapad av Johan Frick-->
             </footer>
 

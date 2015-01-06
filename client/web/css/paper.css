@@ -6,12 +6,25 @@ core-scaffold::shadow core-toolbar {
 .menu {
     display: inline-block;
     width: 100%;
-    margin: 30px;
 }
 
 .item {
     position: relative;
     height: 28px;
+    line-height: 28px;
+    text-indent: 30px;
+}
+
+.menu-header {
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc3JSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(left,  rgba(219,219,219,0.65) 0%, rgba(219,219,219,0) 77%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(219,219,219,0.65)), color-stop(77%,rgba(219,219,219,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(219,219,219,0.65) 0%,rgba(219,219,219,0) 77%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(219,219,219,0.65) 0%,rgba(219,219,219,0) 77%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(219,219,219,0.65) 0%,rgba(219,219,219,0) 77%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(219,219,219,0.65) 0%,rgba(219,219,219,0) 77%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6dbdbdb', endColorstr='#00dbdbdb',GradientType=1 ); /* IE6-8 */
 }
 
 .item-selected {
@@ -36,10 +49,15 @@ paper-ripple {
     margin-bottom: -3px;
 }
 
+core-scaffold::shadow core-drawer-panel {
+    box-shadow: 5px 0 50px 0px rgba(0, 0, 0, 0.26);
+}
 
 core-scaffold::shadow core-drawer-panel::shadow ::content[select="[drawer]"] > * {
     box-shadow: none;
 }
+
+
 
 core-scaffold > core-header-panel::shadow #mainPanel {
     border-top: 1px solid lightgray;

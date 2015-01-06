@@ -1,4 +1,4 @@
-var viewModel = {
+module.exports = {
     init: function () {
         var images = [];
         for (var i = 1; i <= 22; i++) {
@@ -11,10 +11,4 @@ var viewModel = {
         }
         this.images = images;
     }
-};
-
-module.exports.create = function () {
-    var vm = Object.create(viewModel);
-    vm.init();
-    return vm;
 };

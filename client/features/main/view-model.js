@@ -17,15 +17,15 @@ var viewModel = {
 function createSections(self) {
     self.sections = ko.observableArray();
     self.selectedIndex = ko.observable(0);
-    request.get('/menu.json', function (res) {
+    request.get('/json/menu.json', function (res) {
         if (res.status === 200) {
             var sections = res.body;
             var selected = localStorage.getItem('selected-section') || 'Foto';
             sections.forEach(function (section, index) {
                 section.selected = ko.observable(false);
-                section.disabled = section.disabled || false;
+                section.header = section.header || false;
                 section.select = function (current) {
-                    if (!section.disabled) {
+                    if (!section.header) {
                         self.sections().forEach(function (s) {
                             s.selected(false);
                         });

@@ -1,10 +1,8 @@
 var viewModel = {
     init: function (params) {
         this.playIconClass = 'play ' + params.playIconClass;
-        this.items = params.items.map(function(item){
-            item.click = showIFrame;
-            return item;
-        });
+        this.items = params.items;
+        this.click = showIFrame;
     }
 };
 

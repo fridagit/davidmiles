@@ -1,32 +1,32 @@
 var request = require('utils/request');
 
-var viewModel = {
+module.exports = {
     init: function () {
-        var ids = ['5nrPJLz8D9BAwBkUYyISWi', '5RyzFjnNSYWYHdP5Nn9SDp', '5jo9tWCGshEon2Dt7a9EO7', '522oMBIoc9vQ6urmx5E6mG'];
-        this.albums = ids.map(function (id) {
-            var album = {
-                id: id,
-                iFrameUrl: 'https://embed.spotify.com/?uri=spotify:album:' + id + '&view=coverart&theme=white',
-                title: '',
-                image: ko.observable(),
-                width: '300px',
-                height: '300px'
-            };
-            request('GET', 'https://api.spotify.com/v1/albums/' + album.id).end(function (result) {
-                var images = result.body.images;
-                images.forEach(function(image) {
-                    if (image.height === 300) {
-                        album.image('url(' + image.url + ')');
-                    }
+        var self = this;
+        self.albums = ko.observableArray();
+        var ids = request.get('/json/spotify_albums.json', function (res) {
+            if (res.status === 200) {
+                var ids = res.body;
+                ids.forEach(function (id) {
+                    var album = {
+                        id: id,
+                        iFrameUrl: 'https://embed.spotify.com/?uri=spotify:album:' + id + '&view=coverart&theme=white',
+                        title: '',
+                        image: ko.observable(),
+                        width: '300px',
+                        height: '300px'
+                    };
+                    request('GET', 'https://api.spotify.com/v1/albums/' + album.id).end(function (result) {
+                        var images = result.body.images;
+                        images.forEach(function (image) {
+                            if (image.height === 300) {
+                                album.image('url(' + image.url + ')');
+                            }
+                        });
+                    });
+                    self.albums.push(album);
                 });
-            });
-            return album;
+            }
         });
     }
-};
-
-module.exports.create = function () {
-    var vm = Object.create(viewModel);
-    vm.init();
-    return vm;
 };
