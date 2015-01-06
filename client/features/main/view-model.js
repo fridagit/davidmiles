@@ -1,11 +1,12 @@
 var bus = require('message-bus');
+var request = require('utils/request');
 
 var viewModel = {
     init: function () {
         var self = this;
         var selected = localStorage.getItem('selected-section') || 'Foto';
         this.mainContent = ko.observable(selected.toLowerCase());
-        bus.subscribe('main-content', function(item) {
+        bus.subscribe('main-content', function (item) {
             self.mainContent(item.data.toLowerCase());
         });
         createSections(this);
@@ -14,84 +15,34 @@ var viewModel = {
 };
 
 function createSections(self) {
-    var sections = [
-        {
-            text: 'ARTISTEN',
-            disabled: true
-        },
-        {
-            text: 'Discografi'
-        },
-        {
-            text: 'Video'
-        },
-        {
-            text: 'Texter'
-        },
-        {
-            text: 'Kontakt'
-        },
-        {
-            text: 'Recensioner'
-        },
-        {
-            text: 'Shop'
-        },
-        {
-            text: 'Press'
-        },
-        {
-            text: 'Bilder'
-        },
-        {
-            text: 'Gästbok'
-        },
-        {
-            text: 'TRUBADUREN',
-            disabled: true
-        },
-        {
-            text: 'Bilder'
-        },
-        {
-            text: 'Video'
-        },
-        {
-            text: 'Kontakt'
-        },
-        {
-            text: 'Referenser'
-        },
-        {
-            text: 'SPELPLAN'
-        }
-    ];
-
-    self.sections = sections.map(function(section) {
-        return {
-            text: ko.observable(section.text),
-            disabled: section.disabled,
-            selected: ko.observable(false),
-            select: function(current) {
-                if (!section.disabled) {
-                    self.sections.forEach(function (s) {
-                        s.selected(false);
-                    });
-                    localStorage.setItem('selected-section', current.text());
-                    current.selected(true);
-                    bus.publish('main-content', current.text().toLowerCase());
-                }
-            }
-        };
-    });
-    var selected = localStorage.getItem('selected-section') || 'Foto';
+    self.sections = ko.observableArray();
     self.selectedIndex = ko.observable(0);
-    self.sections.forEach(function(section, index) {
-        if (section.text() === selected) {
-            section.selected(true);
-            self.selectedIndex(index);
+    request.get('/menu.json', function (res) {
+        if (res.status === 200) {
+            var sections = res.body;
+            var selected = localStorage.getItem('selected-section') || 'Foto';
+            sections.forEach(function (section, index) {
+                section.selected = ko.observable(false);
+                section.disabled = section.disabled || false;
+                section.select = function (current) {
+                    if (!section.disabled) {
+                        self.sections().forEach(function (s) {
+                            s.selected(false);
+                        });
+                        localStorage.setItem('selected-section', current.text);
+                        current.selected(true);
+                        bus.publish('main-content', current.text.toLowerCase());
+                    }
+                };
+                if (section.text === selected) {
+                    section.selected(true);
+                    self.selectedIndex(index);
+                }
+                self.sections.push(section);
+            });
         }
     });
+
 }
 
 
