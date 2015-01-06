@@ -3,7 +3,7 @@ var template = require('./template');
 var viewModel = require('./view-model');
 
 exports.init = function () {
-    var pages = ['discografi', 'foto', 'video', 'hem'];
+    var pages = ['discografi', 'bilder', 'video', 'hem', 'spelplan', 'texter', 'kontakt', 'recensioner', 'shop'];
     pages.forEach(function (name) {
         var component = {
             viewModel: {

@@ -13,6 +13,7 @@ core-scaffold::shadow core-toolbar {
     height: 28px;
     line-height: 28px;
     text-indent: 30px;
+    cursor: pointer;
 }
 
 .menu-header {
@@ -25,6 +26,7 @@ core-scaffold::shadow core-toolbar {
     background: -ms-linear-gradient(left,  rgba(219,219,219,0.65) 0%,rgba(219,219,219,0) 77%); /* IE10+ */
     background: linear-gradient(to right,  rgba(219,219,219,0.65) 0%,rgba(219,219,219,0) 77%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6dbdbdb', endColorstr='#00dbdbdb',GradientType=1 ); /* IE6-8 */
+    cursor: auto;
 }
 
 .item-selected {
@@ -49,10 +51,21 @@ paper-ripple {
     margin-bottom: -3px;
 }
 
+core-scaffold::shadow core-drawer-panel {
+    max-width: 900px;
+    width: 100%;
+    box-shadow: 5px 0 50px 0px rgba(0, 0, 0, 0.26);
+}
+
+core-scaffold::shadow core-drawer-panel core-icon-button {
+    margin: 60px 0 0 10px;
+}
 
 core-scaffold::shadow core-drawer-panel::shadow ::content[select="[drawer]"] > * {
     box-shadow: none;
 }
+
+
 
 core-scaffold > core-header-panel::shadow #mainPanel {
     border-top: 1px solid lightgray;

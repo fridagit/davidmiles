@@ -8,6 +8,10 @@ body {
     margin: 0;
 }
 
+a:link, a:visited, a:hover, a:active {
+    color: darkred;
+}
+
 html {
     height: 100%;
 }
