@@ -44,10 +44,11 @@ paper-ripple {
 
 .card {
     display: inline-block;
-    margin: 20px;
+    margin: 10px;
 }
 
 .card img {
+    max-width: 100%;
     margin-bottom: -3px;
 }
 

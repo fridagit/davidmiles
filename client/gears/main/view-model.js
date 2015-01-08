@@ -4,8 +4,7 @@ var request = require('utils/request');
 var viewModel = {
     init: function () {
         var self = this;
-        var selected = localStorage.getItem('selected-section') || 'Foto';
-        this.mainContent = ko.observable(selected.toLowerCase());
+        self.mainContent = ko.observable('');
         bus.subscribe('main-content', function (item) {
             self.mainContent(item.data.toLowerCase());
         });
@@ -14,29 +13,34 @@ var viewModel = {
     }
 };
 
-function createSections(self) {
+function createSections(self, callback) {
     self.sections = ko.observableArray();
     self.selectedIndex = ko.observable(0);
     request.get('/json/menu.json', function (res) {
         if (res.status === 200) {
             var sections = res.body;
-            var selected = localStorage.getItem('selected-section') || 'Foto';
+            var selected = localStorage.getItem('selected-section');
+            var start;
             sections.forEach(function (section, index) {
                 section.selected = ko.observable(false);
                 section.header = section.header || false;
-                section.select = function (current) {
+                section.id = section.id || section.text.toLowerCase();
+                section.select = function () {
                     if (!section.header) {
                         self.sections().forEach(function (s) {
                             s.selected(false);
                         });
-                        localStorage.setItem('selected-section', current.text);
-                        current.selected(true);
-                        bus.publish('main-content', current.text.toLowerCase());
+                        localStorage.setItem('selected-section', section.id);
+                        section.selected(true);
+                        bus.publish('main-content', section.id);
                     }
                 };
-                if (section.text === selected) {
-                    section.selected(true);
-                    self.selectedIndex(index);
+                if (selected) {
+                    if (section.id === selected) {
+                        section.select();
+                    }
+                } else if (section.startPage) {
+                    section.select();
                 }
                 self.sections.push(section);
             });

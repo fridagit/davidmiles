@@ -15,20 +15,14 @@
     </core-header-panel>
 
     <div id="title" tool>
-        <img src="/img/logo.png" class="logo" width="300" />
+        <img src="/img/logo.png" class="logo" width="300"/>
     </div>
 
     <div class="content" fit>
         <div class="site">
-
-            <div class="site-content">
-                <div data-bind="component: {name: mainContent}"></div>
-            </div>
-
-            <footer id="footer">
-                <!--Skapad av Johan Frick-->
-            </footer>
-
+            <!--ko if: mainContent()-->
+            <div class="mainContent" data-bind="component: {name: mainContent}"></div>
+            <!--/ko-->
         </div>
     </div>
 </core-scaffold>

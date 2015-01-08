@@ -50,6 +50,7 @@ html {
 }
 
 .logo {
+    max-width: 90%;
     padding-bottom: 7px;
 }
 
@@ -57,8 +58,8 @@ html {
     color: #2e2e2e;
 }
 
-.site-content {
-    overflow: scroll;
+.mainContent {
+    overflow-y: scroll;
     padding: 10px;
 }
 
@@ -80,4 +81,14 @@ html {
     top: 0;
     left: 0;
     margin: 0 !important;
+    opacity: 0.2;
+    filter: alpha(opacity:20);
+}
+
+.marginBottom {
+    margin-bottom: 10px;
+}
+
+.spaced {
+    margin: 0 3px;
 }

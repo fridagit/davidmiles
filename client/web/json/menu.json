@@ -1,9 +1,13 @@
 [
   {
-    "text": "Hem"
+    "text": "Hem",
+    "startPage": true
   },
   {
     "text": "Spelplan"
+  },
+  {
+    "text": "Kontakt"
   },
   {
     "text": "ARTISTEN",
@@ -17,9 +21,6 @@
   },
   {
     "text": "Texter"
-  },
-  {
-    "text": "Kontakt"
   },
   {
     "text": "Recensioner"
@@ -45,9 +46,6 @@
   },
   {
     "text": "Video"
-  },
-  {
-    "text": "Kontakt"
   },
   {
     "text": "Referenser"
