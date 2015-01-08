@@ -1,7 +1,8 @@
-<core-scaffold>
+<core-scaffold drawerWidth="192px">
 
     <core-header-panel navigation flex mode="seamed">
         <core-toolbar id="navheader">
+            <img class="drawerPhoto" src="/img/drawer_photo.jpg"/>
         </core-toolbar>
         <div class="menu" data-bind="foreach: sections">
             <div class="item" data-bind="click: select, css: {'item-selected' : selected(), 'menu-header': header}">

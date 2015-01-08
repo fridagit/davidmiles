@@ -24,41 +24,25 @@
     <link rel="import" href="components/paper-shadow/paper-shadow.html">
     <link rel="import" href="components/paper-tabs/paper-tabs.html">
 
+    {{#css}}
+    <link rel="stylesheet" href="{{.}}">
+    {{/css}}
 
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/paper.css">
-    <link rel="stylesheet" href="css/iframe-list.css">
-    <link rel="stylesheet" href="css/lightbox.css" />
+    {{#libs}}
+    <script src="{{.}}"></script>
+    {{/libs}}
 
-    <!--[CSS]--><!--[/CSS]-->
-
-    <!--[LIB]--><!--[/LIB]-->
-
-    <!--[FRAMEWORK]-->
-    <script src="lib/knockout-v3.2.0.js"></script>
-    <script src="lib/socket.io-v0.9.16.min.js"></script>
-    <script src="lib/cogwheels-v1.0.0.min.js"></script>
-
-    <script src="lib/jquery-1.11.0.min.js"></script>
-    <script src="lib/lightbox.min.js"></script>
-
-    <!--[/FRAMEWORK]-->
-
-    <script src="js/features-v0.0.0.js"></script>
+    <script src="{{cogwheels}}"></script>
+    <script src="{{gears}}"></script>
 
 </head>
 <body>
 <div id="main"></div>
 
-<!--[FEATURES]-->
-
 <script>
-    var bus = require('message-bus');
-
-    bus.subscribe('system-error', function (msg) {
-        console.log(msg);
+    require('message-bus').subscribe('system-error', function (msg) {
+        throw message.data;
     });
-
     cogwheels.start();
 </script>
 

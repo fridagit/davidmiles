@@ -1,12 +1,28 @@
 {
   "name": "davidmiles",
   "version": "0.0.0",
-  "author": {
-    "name": "Johan Frick",
-    "email": "johan.frick@gmail.com"
+  "author": "",
+  "dependencies": {
+    "cogwheels": "1.0.4"
   },
   "devDependencies": {
-    "grunt": "^0.4.4",
-    "cogwheels-tools": "http://cogwheels.mobenga.net/releases/cogwheels-tools-npm-v1.0.0.tar.gz"
+    "gulp": "^3.8.7",
+    "gulp-concat": "^2.3.4",
+    "gulp-if": "^1.2.4",
+    "gulp-jshint": "^1.8.4",
+    "gulp-less": "^1.3.5",
+    "gulp-rename": "^1.2.0",
+    "gulp-rimraf": "^0.1.0",
+    "gulp-size": "^1.0.0",
+    "gulp-sourcemaps": "^1.1.1",
+    "gulp-uglify": "^0.3.1",
+    "jshint-stylish": "^0.4.0",
+    "mobenga-app-server": "^1.0.0",
+    "mobenga-bundle-gears": "^1.1.1",
+    "mobenga-check-conflict": "^1.0.1",
+    "mobenga-handlebars-stream": "^0.9.1",
+    "mobenga-streamify": "^1.0.1",
+    "run-sequence": "^0.3.6",
+    "jquery": "1.11.0"
   }
 }
