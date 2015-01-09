@@ -100,3 +100,7 @@ html {
     overflow-x: scroll;
     white-space: nowrap;
 }
+
+.pressImages {
+    margin-top: 40px;
+}

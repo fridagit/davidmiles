@@ -3,4 +3,15 @@
     <a href="http://www.davidmiles.se/bilder/130607_davidmiles.se_pressmeddelande.pdf" target="_blank">2013-06-07 David Miles Konserter sommaren 2013</a>
     <a href="http://www.davidmiles.se/bilder/121016_davidmiles.se_pressmeddelande.pdf" target="_blank">2012-10-16 David Miles släpper nya skivan Tiden är ett jetplan!</a>
     <a href="http://www.davidmiles.se/bilder/120625_davidmiles.se_pressmeddelande.pdf" target="_blank">2012-06-25 David Miles ger ut ny skiva hösten 2012!</a>
+
+
+    <b class="pressImages">Pressbilder</b>
+
+    <div class="photos" data-bind="foreach: images">
+        <paper-shadow z="2" class="card">
+            <a data-bind="attr: {href: url}" data-lightbox="image-1" data-title="">
+                <img data-bind="attr: {src: thumb}">
+            </a>
+        </paper-shadow>
+    </div>
 </div>
