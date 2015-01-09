@@ -1,32 +1,12 @@
 var request = require('utils/request');
 
-function deserialize(response) {
-	return JSON.parse(response.text);
-}
-
-var prototype = {
-	end: function (callback) {
-		request.post('/data', this.settings, function (response) {
-
-			var err;
-			var data;
-			var json = deserialize(response);
-
-			if (!Array.isArray(json)) {
-				err = new Error('data was not an array!!!!');
-			} else {
-				data = json;
-			}
-
-			callback(err, data);
-
-		}.bind(this));
-	}
-
+exports.getJson = function (jsonName, callback) {
+	request.get('/json/' + jsonName + '.json', function (res) {
+		if (res.status === 200) {
+			var json = JSON.parse(res.text);
+			callback(json);
+		}
+	});
 };
 
-exports.get = function (settings) {
-	var req = Object.create(prototype);
-	req.settings = settings;
-	return req;
-};
+exports.get = request.get;
