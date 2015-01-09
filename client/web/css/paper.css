@@ -1,6 +1,13 @@
 core-scaffold::shadow core-toolbar {
     background: white;
     color: black;
+    height: 128px;
+}
+
+core-scaffold core-toolbar {
+    background: white;
+    color: black;
+    height: 128px;
 }
 
 .menu {
@@ -70,8 +77,4 @@ core-scaffold::shadow core-drawer-panel::shadow ::content[select="[drawer]"] > *
 
 core-scaffold > core-header-panel::shadow #mainPanel {
     border-top: 1px solid lightgray;
-}
-
-core-scaffold::shadow core-toolbar {
-    height: 128px;
 }
