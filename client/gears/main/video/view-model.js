@@ -2,7 +2,7 @@ var request = require('utils/request');
 
 module.exports = {
     init: function () {
-        var ids = ['5nMKfLtT9YU', 'WDnrjwN5X5I', 'ABF7PrYchNQ', 'AXf7meAEQnU'];
+        var ids = ['34ZkmRl8l0k', 'WDnrjwN5X5I', 'ABF7PrYchNQ', 'AXf7meAEQnU'];
         this.videos = ids.map(function (id) {
             var video = {
                 id: id,
