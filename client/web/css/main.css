@@ -79,6 +79,8 @@ html {
 }
 
 .drawerPhoto {
+    width: 127px;
+    height: 128px;
     position: absolute;
     top: 0;
     left: 0;
