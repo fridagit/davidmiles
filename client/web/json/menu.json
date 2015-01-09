@@ -32,20 +32,24 @@
     "text": "Press"
   },
   {
-    "text": "Bilder"
+    "text": "Bilder",
+    "id": "bilder-artist"
   },
   {
-    "text": "Gästbok"
+    "text": "Gästbok",
+    "id": "gastbok"
   },
   {
     "text": "TRUBADUREN",
     "header": true
   },
   {
-    "text": "Bilder"
+    "text": "Bilder",
+    "id": "bilder-trubadur"
   },
   {
-    "text": "Video"
+    "text": "Video",
+    "id": "video-trubadur"
   },
   {
     "text": "Referenser"
