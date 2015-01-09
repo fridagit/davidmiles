@@ -106,3 +106,38 @@ html {
 .pressImages {
     margin-top: 40px;
 }
+
+.floatRight {
+    float: right;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.clearFloat {
+    clear: both;
+}
+
+.halfWidth {
+    max-width:50%;
+}
+
+.twoThirds {
+    max-width: 66%;
+}
+
+.quote {
+    width: 200px;
+    margin:20px;
+    font-family: serif;
+}
+
+.quoteText {
+    font-style: italic;
+}
+
+.quoteSource {
+    font-size: 0.8em;
+    font-weight: bold;
+}
