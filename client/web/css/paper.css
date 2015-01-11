@@ -76,9 +76,7 @@ core-scaffold::shadow core-drawer-panel::shadow ::content[select="[drawer]"] > *
 
 
 core-scaffold > core-header-panel {
-    border-right: 1px solid lightgray;
 }
 
 core-scaffold > core-header-panel::shadow #mainPanel {
-    border-top: 1px solid lightgray;
 }

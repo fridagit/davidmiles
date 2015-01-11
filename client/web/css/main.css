@@ -24,7 +24,7 @@ html {
 }
 
 .content {
-    border-top: 1px solid lightgray;
+background-color: white;
 }
 
 #title {
@@ -79,14 +79,10 @@ html {
 }
 
 .drawerPhoto {
-    width: 127px;
-    height: 128px;
     position: absolute;
     top: 0;
     left: 0;
     margin: 0 !important;
-    opacity: 0.2;
-    filter: alpha(opacity:20);
 }
 
 .marginBottom {
