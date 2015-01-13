@@ -6,6 +6,13 @@ body {
     max-width: 900px;
     background-color: white;
     height: 100%;
+    overflow-x: hidden;
+}
+
+.mainContent {
+    height:100%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .navbar {
@@ -33,7 +40,12 @@ body {
 
 #sidebar {
     height: 100%;
+    overflow-y: auto;
     padding-right: 0;
+}
+
+#sidebar::-webkit-scrollbar {
+    display: none;
 }
 
 #sidebar .nav {
