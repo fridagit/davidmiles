@@ -5,7 +5,7 @@ body {
     font-family: 'Yanone Kaffeesatz', sans-serif;
     color: dimgray;
     height: 100%;
-    margin: 0;
+    background-color: #f8f8f8;
 }
 
 a:link, a:visited, a:hover, a:active {
@@ -13,55 +13,47 @@ a:link, a:visited, a:hover, a:active {
 }
 
 html {
-    height: 100%;
+    min-height: 100%;
 }
-
-.site {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.content {
-background-color: white;
-}
-
-#title {
-    font-family: 'Fjalla One', 'Yanone Kaffeesatz', sans-serif;
-    font-size: 4.3em;
-    color: dimgray;
-    margin-top: 65px;
-}
-
-#title img {
-    vertical-align: middle;
-}
-
-#title div {
-    margin-left: -100px;
-    display: inline-block;
-    transform: scale(0.6, 1); /* W3C */
-    -webkit-transform: scale(0.6, 1); /* Safari and Chrome */
-    -moz-transform: scale(0.6, 1); /* Firefox */
-    -ms-transform: scale(0.6, 1); /* IE 9 */
-    -o-transform: scale(0.6, 1); /* Opera */
-    vertical-align: middle;
-}
-
 .logo {
-    max-width: 90%;
-    padding-bottom: 7px;
+    margin-left: 20px;
+    width: 300px;
+    max-width: 60%;
 }
 
-.selected {
-    color: #2e2e2e;
-}
-
-.mainContent {
-    overflow-y: scroll;
-    padding: 10px;
+#site {
+    background-color: #f8f8f8;
     height: 100%;
+}
+
+.main {
+    height: 100%;
+}
+
+
+.item {
+    position: relative;
+    height: 28px;
+    line-height: 28px;
+    text-indent: 30px;
+    cursor: pointer;
+}
+
+.menu-header {
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc3JSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+    background: -moz-linear-gradient(left,  rgba(219,219,219,0.65) 0%, rgba(219,219,219,0) 77%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(219,219,219,0.65)), color-stop(77%,rgba(219,219,219,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(219,219,219,0.65) 0%,rgba(219,219,219,0) 77%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(219,219,219,0.65) 0%,rgba(219,219,219,0) 77%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(219,219,219,0.65) 0%,rgba(219,219,219,0) 77%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(219,219,219,0.65) 0%,rgba(219,219,219,0) 77%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6dbdbdb', endColorstr='#00dbdbdb',GradientType=1 ); /* IE6-8 */
+    cursor: auto;
+}
+
+.item-selected {
+    color: darkred;
 }
 
 .photos {
@@ -69,20 +61,14 @@ background-color: white;
     height: 100%;
 }
 
-#header {
-    padding-bottom: 40px;
-}
-
-#footer {
-    padding: 10px;
-    text-align: right;
-}
-
 .drawerPhoto {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0 !important;
+    margin: -3px 0 0 -15px;
+}
+
+@media screen and (max-width: 767px) {
+.drawerPhoto {
+    display: none;
+}
 }
 
 .marginBottom {
@@ -95,7 +81,7 @@ background-color: white;
 
 .images {
     padding-bottom: 10px;
-    overflow-x: scroll;
+    overflow-x: auto;
     white-space: nowrap;
 }
 
@@ -116,7 +102,7 @@ background-color: white;
 }
 
 .halfWidth {
-    max-width:50%;
+    max-width: 50%;
 }
 
 .twoThirds {
@@ -125,7 +111,7 @@ background-color: white;
 
 .quote {
     width: 200px;
-    margin:20px;
+    margin: 20px;
     font-family: serif;
 }
 
@@ -136,4 +122,14 @@ background-color: white;
 .quoteSource {
     font-size: 0.8em;
     font-weight: bold;
+}
+
+.card {
+    display: inline-block;
+    margin: 10px;
+}
+
+.card img {
+    max-width: 100%;
+    margin-bottom: -3px;
 }

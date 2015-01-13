@@ -26,5 +26,5 @@ exports.init = function () {
 };
 
 exports.render = function () {
-    layoutEngine.render(template, viewModel.create(), 'main');
+    layoutEngine.render(template, viewModel.create(), 'site');
 };

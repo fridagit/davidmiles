@@ -5,7 +5,7 @@ var viewModel = {
         var self = this;
         this.images = ko.observableArray();
         this.loopImg = ko.observableArray();
-        this.loopText = ko.observable('sadf');
+        this.loopText = ko.observable('');
         this.afterAdd = function (elem) {
             if (elem.nodeType === 1) {
                 $(elem).hide().fadeIn(); // jshint ignore:line

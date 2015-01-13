@@ -29,6 +29,7 @@ gulp.task('build', function (callback) {
 	runSequence('clean',
 		'lint',
         'copy-lib',
+        'copy-css',
 		'bundle',
 		['copy', 'less'],
 		'template',
@@ -37,16 +38,25 @@ gulp.task('build', function (callback) {
 
 
 gulp.task('copy-lib', function(callback) {
-    var files = ['node_modules/cogwheels/builds/cogwheels-*.js',
-        'node_modules/cogwheels/lib/knockout*.js',
-        '!node_modules/cogwheels/lib/knockout*min.js',
-        '!node_modules/cogwheels/builds/cogwheels-*min.js',
+	var files = ['node_modules/cogwheels/builds/cogwheels-*.js',
+		'node_modules/cogwheels/lib/knockout*.js',
+		'!node_modules/cogwheels/lib/knockout*min.js',
+		'!node_modules/cogwheels/builds/cogwheels-*min.js',
 		'node_modules/knockout.mapping/knockout.mapping.js',
-		'node_modules/jquery/dist/jquery.js'];
+		'node_modules/jquery/dist/jquery.min.js',
+		'node_modules/bootstrap/dist/js/bootstrap.min.js'];
 
-    var destDir = buildsDir + '/lib';
+	var destDir = buildsDir + '/lib';
 
-    return gulp.src(files).pipe(gulp.dest(destDir));
+	return gulp.src(files).pipe(gulp.dest(destDir));
+});
+
+gulp.task('copy-css', function(callback) {
+	var files = ['node_modules/bootstrap/dist/css/bootstrap.min.css'];
+
+	var destDir = buildsDir + '/css';
+
+	return gulp.src(files).pipe(gulp.dest(destDir));
 });
 
 gulp.task('bundle', function (callback) {
@@ -137,7 +147,7 @@ gulp.task('template', function () {
 	};
 
 	var data = {
-		libs: { files: ['lib/*.js', '!lib/cogwheels*'], opts: opts },
+		libs: { files: ['lib/jquery*.js', 'lib/*.js', '!lib/cogwheels*'], opts: opts },
 		css: { files: ['css/*.css'], opts: opts },
 		gears: { files: ['gears/gears-v' + pkg.version + '.js'], opts: opts },
 		cogwheels: { files: ['lib/cogwheels-v*.js'], opts: opts }

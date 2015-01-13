@@ -30,9 +30,7 @@ function createSections(self, callback) {
                     localStorage.setItem('selected-section', section.id);
                     section.selected(true);
                     bus.publish('main-content', section.id);
-                    try {
-                        document.querySelector('core-scaffold').closeDrawer();
-                    } catch(e){}
+                    document.querySelector('#sidebar').parentElement.className = 'row row-offcanvas row-offcanvas-left';
                 }
             };
             if (selected) {

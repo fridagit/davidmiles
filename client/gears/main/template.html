@@ -1,28 +1,26 @@
-<core-scaffold drawerWidth="128px">
+<div class="main">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+                <img class="drawerPhoto" src="/img/drawer_photo.jpg"/>
+                <img class="logo" src="/img/logo.png"/>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row row-offcanvas row-offcanvas-left">
+            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+                <ul class="nav" data-bind="foreach: sections">
+                    <li class="item" data-bind="click: select, css: {'item-selected' : selected(), 'menu-header': header}, text:text"></li>
+                </ul>
+            </div>
 
-    <core-header-panel navigation flex mode="seamed">
-        <core-toolbar id="navheader">
-            <img class="drawerPhoto" src="/img/drawer_photo.jpg"/>
-        </core-toolbar>
-        <div class="menu" data-bind="foreach: sections">
-            <div class="item" data-bind="click: select, css: {'item-selected' : selected(), 'menu-header': header}">
-                <div fit="" data-bind="text: text"></div>
-                <!--ko if:!header-->
-                <paper-ripple fit=""></paper-ripple>
+            <div class="col-xs-12 col-sm-9">
+                <!--ko if: mainContent()-->
+                <div class="mainContent" data-bind="component: {name: mainContent}"></div>
                 <!--/ko-->
             </div>
         </div>
-    </core-header-panel>
-
-    <div id="title" tool>
-        <img src="/img/logo.png" class="logo" width="300"/>
     </div>
-
-    <div class="content" fit>
-        <div class="site">
-            <!--ko if: mainContent()-->
-            <div class="mainContent" data-bind="component: {name: mainContent}"></div>
-            <!--/ko-->
-        </div>
-    </div>
-</core-scaffold>
+</div>

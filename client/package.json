@@ -23,6 +23,7 @@
     "mobenga-handlebars-stream": "^0.9.1",
     "mobenga-streamify": "^1.0.1",
     "run-sequence": "^0.3.6",
-    "jquery": "1.11.0"
+    "jquery": "1.11.0",
+    "bootstrap": "3.3.1"
   }
 }
