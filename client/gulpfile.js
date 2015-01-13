@@ -1,5 +1,4 @@
 var gulp = require('gulp');
-var path = require('path');
 var runSequence = require('run-sequence');
 var stylish = require('jshint-stylish');
 
@@ -9,7 +8,7 @@ var size = require('gulp-size');
 var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
-var less = require('gulp-less');
+var less = require('gulp-less-sourcemap');
 var gulpIf = require('gulp-if');
 var sourcemaps = require('gulp-sourcemaps');
 
@@ -90,7 +89,7 @@ gulp.task('clean', function () {
 
 gulp.task('copy', function () {
 	return gulp.src([
-		'web/**/*'
+		'web/**/*', '!web/**/*.less', '!web/**/*.template.html'
 	]).pipe(gulp.dest(buildsDir));
 
 });
@@ -102,7 +101,7 @@ gulp.task('conflict', function () {
 });
 
 gulp.task('less', function () {
-	gulp.src(['web/less/main.less', 'gears/**/*.less'])
+	gulp.src(['web/css/main.less', 'web/css/*.less'])
 		.pipe(size({title: 'less', 'showFiles': true}))
 		.pipe(less())
 		.pipe(concat('main.css'))

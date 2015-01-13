@@ -1,3 +1,5 @@
+@import "../less/lesshat";
+
 .lazyIFrames {
     text-align: center;
 }
@@ -14,16 +16,11 @@
     background-size: 64px 64px;
     position: relative;
     overflow: hidden;
-    transition: all 200ms ease-out;
+    .transition(all 200ms ease-out);
     height: 100%;
     width: 100%;
     cursor: pointer;
     text-align: center;
     color: white;
     text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
-}
-
-.play:hover {
-    opacity: 1;
-    filter: alpha(opacity=100);
 }
