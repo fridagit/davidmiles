@@ -27,7 +27,7 @@ var buildsDir = 'builds/web/' + node_env;
 gulp.task('build', function (callback) {
 	runSequence('clean',
 		'lint',
-        'copy-lib',
+        'copy-npm-libs',
         'copy-css',
 		'bundle',
 		['copy', 'less'],
@@ -36,7 +36,7 @@ gulp.task('build', function (callback) {
 });
 
 
-gulp.task('copy-lib', function(callback) {
+gulp.task('copy-npm-libs', function(callback) {
 	var files = ['node_modules/cogwheels/builds/cogwheels-*.js',
 		'node_modules/cogwheels/lib/knockout*.js',
 		'!node_modules/cogwheels/lib/knockout*min.js',
@@ -45,7 +45,7 @@ gulp.task('copy-lib', function(callback) {
 		'node_modules/jquery/dist/jquery.min.js',
 		'node_modules/bootstrap/dist/js/bootstrap.min.js'];
 
-	var destDir = buildsDir + '/lib';
+	var destDir = buildsDir + '/npm-libs';
 
 	return gulp.src(files).pipe(gulp.dest(destDir));
 });
@@ -146,10 +146,10 @@ gulp.task('template', function () {
 	};
 
 	var data = {
-		libs: { files: ['lib/jquery*.js', 'lib/*.js', '!lib/cogwheels*'], opts: opts },
+		libs: { files: ['npm-libs/jquery*.js', 'npm-libs/*.js', '!npm-libs/cogwheels*', 'non-npm-libs'], opts: opts },
 		css: { files: ['css/*.css'], opts: opts },
 		gears: { files: ['gears/gears-v' + pkg.version + '.js'], opts: opts },
-		cogwheels: { files: ['lib/cogwheels-v*.js'], opts: opts }
+		cogwheels: { files: ['npm-libs/cogwheels-v*.js'], opts: opts }
 	};
 
 	return handlebarsStream('web/index.template.html', data)
