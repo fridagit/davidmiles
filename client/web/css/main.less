@@ -1,131 +1,143 @@
 @import url('http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
-
 @import "../less/lesshat";
 
 body {
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 1.7em;
-    color: dimgray;
-    height: 100%;
-    background-color: #f8f8f8;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 1.7em;
+  color: dimgray;
+  height: 100%;
+  background-color: #f8f8f8;
 }
 
 a:link, a:visited, a:hover, a:active {
-    color: darkred;
+  color: darkred;
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 .logo {
-    margin-left: 20px;
-    width: 300px;
-    max-width: 60%;
+  margin-left: 20px;
+  width: 300px;
+  max-width: 60%;
 }
 
 #site {
-    background-color: #f8f8f8;
-    height: 100%;
+  background-color: #f8f8f8;
+  height: 100%;
 }
 
 .main {
-    height: 100%;
+  height: 100%;
 }
 
 .item {
-    position: relative;
-    height: 28px;
-    line-height: 28px;
-    text-indent: 30px;
-    cursor: pointer;
+  position: relative;
+  height: 28px;
+  line-height: 28px;
+  text-indent: 30px;
+  cursor: pointer;
 }
 
 .menu-header {
-    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc3JSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-    .horizontal-gradient(rgba(248, 248, 248, 0.65) 0%, rgba(248, 248, 248, 0) 77%); /* FF3.6+ */
-    cursor: auto;
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc3JSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+  .horizontal-gradient(rgba(248, 248, 248, 0.65) 0%, rgba(248, 248, 248, 0) 77%); /* FF3.6+ */
+  cursor: auto;
 }
 
-.item-selected {
-    color: darkred;
+.item-selected, .red {
+  color: darkred;
 }
 
 .photos {
-    text-align: center;
-    max-height: 100%;
+  text-align: center;
+  max-height: 100%;
 }
 
 .drawerPhoto {
-    margin: -3px 0 0 -15px;
+  margin: -3px 0 0 -15px;
 }
 
 @media screen and (max-width: 767px) {
-    .drawerPhoto {
-        display: none;
-    }
+  .drawerPhoto {
+    display: none;
+  }
 }
 
 .marginBottom {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .spaced {
-    margin: 0 3px;
+  margin: 0 3px;
 }
 
 .images {
-    padding-bottom: 10px;
-    overflow-x: auto;
-    white-space: nowrap;
+  padding-bottom: 10px;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .pressImages {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .floatRight {
-    float: right;
+  float: right;
 }
 
 .floatLeft {
-    float: left;
+  float: left;
 }
 
 .clearFloat {
-    clear: both;
+  clear: both;
 }
 
 .halfWidth {
-    max-width: 50%;
+  max-width: 40%;
 }
 
 .twoThirds {
-    max-width: 66%;
+  max-width: 66%;
 }
 
 .quote {
-    width: 200px;
-    margin: 20px;
-    font-family: serif;
+  width: 200px;
+  margin: 20px;
+  font-family: serif;
 }
 
 .quoteText {
-    font-style: italic;
+  font-style: italic;
 }
 
 .quoteSource {
-    font-size: 0.8em;
-    font-weight: bold;
+  font-size: 0.8em;
+  font-weight: bold;
 }
 
 .card {
-    display: inline-block;
-    margin: 10px;
+  display: inline-block;
+  margin: 10px;
 }
 
 .card img {
-    max-width: 100%;
-    margin-bottom: -3px;
+  max-width: 100%;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.homeImage {
+  max-width: 45%;
+}
+
+@media screen and (max-width: 767px) {
+  .homeImage {
+    max-width: 90%;
+  }
 }

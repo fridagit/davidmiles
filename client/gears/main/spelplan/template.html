@@ -1,11 +1,16 @@
-<paper-shadow z="1" class="card floatRight halfWidth">
-    <img src="/img/spelplan.jpg"/>
-</paper-shadow>
+<img src="/img/spelplan.jpg" class="card floatRight halfWidth"/>
 
-<p vertical layout>
-<div class="marginBottom">17/1 Kings Hill, Falkenberg</div>
-<div class="marginBottom">29/1 Universeum, Göteborg företagsgig Fredag event</div>
-<div class="marginBottom">30/1 Kings Hill, Falkenberg</div>
-<div class="marginBottom">31/1 Kings Hill, Falkenberg</div>
-<div class="marginBottom">25/6 Strandfest, Vassbäck Frillesås</div>
-</p>
+<div class="red">Kommande</div>
+<div class="marginBottom" data-bind="foreach: upcoming">
+    <div>
+        <span class="bold" data-bind="text: date"></span>
+        <span data-bind="text: place"></span>
+    </div>
+</div>
+
+<div class="red">Tidigare</div>
+<div data-bind="foreach: history">
+    <span class="bold" data-bind="text: date"></span>
+    <span data-bind="text: place"></span>
+</div>
+
