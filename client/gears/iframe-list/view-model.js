@@ -18,6 +18,8 @@ function showIFrame(item, event) {
     if (item.fill) {
         iframe.style.width = element.parentElement.style.width;
         iframe.style.height = element.parentElement.style.height;
+    } else {
+        iframe.style.display = 'block';
     }
     element.replaceChild(iframe, element.querySelector('.replaceMe'));
     element.className = 'play';
