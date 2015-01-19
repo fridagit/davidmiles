@@ -1,5 +1,5 @@
 <div class="lazyIFrames" data-bind="foreach: items">
-    <paper-shadow z="2" class="card" data-bind="style: {backgroundImage: image, width: width, height: height}">
+    <paper-shadow z="2" class="card" style="background-size: 100%" data-bind="style: {backgroundImage: image, width: width, height: height}">
         <div data-bind="click: $parent.click, css: $parent.playIconClass">
             <div class="replaceMe" data-bind="text: title"></div>
         </div>

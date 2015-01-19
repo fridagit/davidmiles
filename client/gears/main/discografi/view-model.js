@@ -11,8 +11,8 @@ module.exports = {
                     iFrameUrl: 'https://embed.spotify.com/?uri=spotify:album:' + id + '&view=coverart&theme=white',
                     title: '',
                     image: ko.observable(),
-                    width: '300px',
-                    height: '300px'
+                    width: '250px',
+                    height: '250px'
                 };
                 request.get('https://api.spotify.com/v1/albums/' + album.id, function (result) {
                     var images = result.body.images;
