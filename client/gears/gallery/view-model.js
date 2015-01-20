@@ -3,18 +3,25 @@ var request = require('data-request');
 var viewModel = {
     init: function (params) {
         var self = this;
-        this.images = ko.observableArray();
+        var mainContent = $('.mainContent');
+        this.width = mainContent.width();
+        this.height = mainContent.height() - 80;
         request.getJson(params.jsonName, function (images) {
-            self.images(images);
             setTimeout(function () {
-                var mainContentDiv = $($('.mainContent > div')[0]); // jshint ignore:line
-                var height = mainContentDiv.height();
-                var width = mainContentDiv.width();
-                var maxHeight = width * 480 / 533;
-                if (maxHeight > height) {
-                    maxHeight = height;
-                }
-                $('.pgwSlideshow').pgwSlideshow({maxHeight: maxHeight, autoSlide: true, transitionEffect: 'fading'}); // jshint ignore:line
+                images.forEach(function (image) {
+                    image.caption = image.text;
+                    image.img = image.url;
+                    image.thumb = image.url;
+                    image.full = image.url;
+                });
+                $('.fotorama').fotorama({
+                    data: images,
+                    allowfullscreen: true,
+                    autoplay: '5000',
+                    loop: true,
+                    arrows:'always',
+                    shuffle: true
+                });
             }, 0);
         });
     }

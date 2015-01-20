@@ -51,7 +51,7 @@ gulp.task('copy-npm-libs', function(callback) {
 });
 
 gulp.task('copy-css', function(callback) {
-	var files = ['web/css/*.css', 'node_modules/bootstrap/dist/css/bootstrap.min.css'];
+	var files = ['web/css/*', '!web/css/*.less', 'node_modules/bootstrap/dist/css/bootstrap.min.css'];
 
 	var destDir = buildsDir + '/css';
 
@@ -147,7 +147,7 @@ gulp.task('template', function () {
 
 	var data = {
 		libs: { files: ['npm-libs/jquery*.js', 'npm-libs/*.js', '!npm-libs/cogwheels*', 'non-npm-libs/*.js'], opts: opts },
-		css: { files: ['css/*.min.css','css/main.css'], opts: opts },
+		css: { files: ['css/*.css','css/main.css'], opts: opts },
 		gears: { files: ['gears/gears-v' + pkg.version + '.js'], opts: opts },
 		cogwheels: { files: ['npm-libs/cogwheels-v*.js'], opts: opts }
 	};

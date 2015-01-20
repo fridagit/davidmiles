@@ -1,10 +1,4 @@
 <div class="photos">
-    <ul class="pgwSlideshow" data-bind="foreach: images">
-        <li>
-            <a data-bind="attr: {href: url}" target="_blank">
-                <img src="" data-bind="attr: {src: url, 'alt': text}">
-            </a>
-        </li>
-    </ul>
+    <div class="fotorama" data-auto="false" data-nav="thumbs" data-bind="attr:{'data-width':width, 'data-height':height}"></div>
 </div>
 
