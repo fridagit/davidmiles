@@ -1,6 +1,13 @@
 <img src="/img/spelplan.jpg" class="card floatRight halfWidth"/>
 
+<div class="marginBottom bigger" data-bind="with: first">
+    <div class="red">Nästa spelning <span data-bind="text: distance"></span></div>
+    <div>Datum: <span data-bind="text: date"></span></div>
+    <div>Plats: <span data-bind="text: place"></span></div>
+</div>
+
 <div class="red">Kommande</div>
+<div data-bind="if:upcoming().length === 0">Inga spelningar inbokade</div>
 <div class="marginBottom" data-bind="foreach: upcoming">
     <div>
         <span class="bold" data-bind="text: date"></span>
@@ -8,9 +15,11 @@
     </div>
 </div>
 
-<div class="red">Tidigare</div>
-<div data-bind="foreach: history">
-    <span class="bold" data-bind="text: date"></span>
-    <span data-bind="text: place"></span>
+<div data-bind="if:history().length > 0">
+    <div class="red">Tidigare</div>
+    <div data-bind="foreach: history">
+        <span class="bold" data-bind="text: date"></span>
+        <span data-bind="text: place"></span>
+    </div>
 </div>
 
