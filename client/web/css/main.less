@@ -1,4 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import "../less/vars";
 @import "../less/lesshat";
 
 .font() {
@@ -10,11 +11,11 @@ body {
   .font();
   font-size: 1.7em;
   height: 100%;
-  background-color: #f8f8f8;
+  background-color: @backgroundColor;
 }
 
 a:link, a:visited, a:hover, a:active {
-  color: darkred;
+  color: @accentColor;
 }
 
 html {
@@ -28,7 +29,7 @@ html {
 }
 
 #site {
-  background-color: #f8f8f8;
+  background-color: @backgroundColor;
   height: 100%;
 }
 
@@ -45,14 +46,13 @@ html {
 }
 
 .menu-header {
-  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
-  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+CiAgICA8c3RvcCBvZmZzZXQ9Ijc3JSIgc3RvcC1jb2xvcj0iI2RiZGJkYiIgc3RvcC1vcGFjaXR5PSIwIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
-  .horizontal-gradient(rgba(248, 248, 248, 0.65) 0%, rgba(248, 248, 248, 0) 77%); /* FF3.6+ */
+  .horizontal-gradient(rgba(214, 214, 214, 1) 0%, rgba(214, 214, 214, 0) 77%); /* FF3.6+ */
   cursor: auto;
+  color: @accentColor;
 }
 
 .item-selected, .red {
-  color: darkred;
+  color: @accentColor;
 }
 
 .photos {
