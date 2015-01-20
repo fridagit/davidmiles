@@ -10,13 +10,13 @@
     </div>
     <div class="container">
         <div class="row row-offcanvas row-offcanvas-left">
-            <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+            <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation">
                 <ul class="nav" data-bind="foreach: sections">
                     <li class="item" data-bind="click: select, css: {'item-selected' : selected(), 'menu-header': header}, text:text"></li>
                 </ul>
             </div>
 
-            <div class="col-xs-12 col-sm-9 mainContent">
+            <div class="col-xs-12 col-sm-10 mainContent">
                 <!--ko if: mainContent()-->
                 <div data-bind="component: {name: mainContent}"></div>
                 <!--/ko-->
