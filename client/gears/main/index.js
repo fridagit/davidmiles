@@ -1,7 +1,9 @@
 var layoutEngine = require('layout-engine');
 var template = require('./template');
-var viewModel = require('./view-model');
+var viewModel = require('./view-model').create();
 var request = require('data-request');
+
+
 
 exports.init = function () {
     request.getJson('menu', function (sections) {
@@ -22,9 +24,10 @@ exports.init = function () {
                 ko.components.register(name, component);
             }
         });
+        viewModel.createSections();
     });
 };
 
 exports.render = function () {
-    layoutEngine.render(template, viewModel.create(), 'site');
+    layoutEngine.render(template, viewModel, 'site');
 };
