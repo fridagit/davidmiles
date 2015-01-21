@@ -41,7 +41,7 @@ gulp.task('copy-npm-libs', function (callback) {
         '!node_modules/cogwheels/lib/knockout*min.js',
         '!node_modules/cogwheels/builds/cogwheels-*min.js',
         'node_modules/knockout.mapping/knockout.mapping.js',
-        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/jquery/dist/jquery.min.*',
         'node_modules/bootstrap/dist/js/bootstrap.min.js'];
 
     var destDir = buildsDir + '/npm-libs';
