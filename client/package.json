@@ -16,6 +16,7 @@
     "gulp-size": "^1.0.0",
     "gulp-sourcemaps": "^1.1.1",
     "gulp-uglify": "^0.3.1",
+    "gulp-hash": "latest",
     "jshint-stylish": "^0.4.0",
     "mobenga-app-server": "^1.0.0",
     "mobenga-bundle-gears": "^1.1.1",
