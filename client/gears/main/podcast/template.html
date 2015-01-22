@@ -1,0 +1,12 @@
+<img class="max100" src="http://assets.podomatic.net/ts/60/23/46/david35710/460%3E_8828787.jpg"/>
+
+<div class="podcasts">
+    <iframe style="display:none" class="max100 iFrameLoading" height='85' width='450' frameborder='0' marginheight='0' marginwidth='0' scrolling='no' src='' allowfullscreen data-bind="attr: {src: selectedUrl}"></iframe>
+
+    <div data-bind="if:podcasts().length === 0">Inga podcasts tillgängliga</div>
+    <div data-bind="foreach: podcasts">
+        <div>
+            <a href="" data-bind="click: click, text: title, css: {'bold': selected}"></a>
+        </div>
+    </div>
+</div>
