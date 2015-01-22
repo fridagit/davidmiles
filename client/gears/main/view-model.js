@@ -6,9 +6,10 @@ var viewModel = {
         var self = this;
         self.mainContent = ko.observable('');
         self.sections = ko.observableArray();
-        self.selectedIndex = ko.observable(0);
         bus.subscribe('main-content', function (item) {
-            self.mainContent(item.data.toLowerCase());
+            var section = item.data.toLowerCase();
+            self.mainContent(section);
+            localStorage.setItem('selected-section', section);
         });
     },
     createSections: function () {
