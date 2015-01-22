@@ -6,5 +6,9 @@ module.exports = {
     },
     goToTrubadur: function() {
         bus.publish('main-content', 'info-trubadur');
+    },
+    goToPodcast: function() {
+        bus.publish('main-content', 'podcast');
     }
+
 };
