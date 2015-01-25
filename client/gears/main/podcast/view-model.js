@@ -11,10 +11,5 @@ module.exports = {
             });
             self.podcasts(podcasts);
         });
-    },
-    dispose: function () {
-        this.podcasts().forEach(function (podcast) {
-            podcast.selected.dispose();
-        });
     }
 };
