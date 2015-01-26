@@ -9,4 +9,12 @@ exports.getJson = function (jsonName, callback) {
 	});
 };
 
+exports.getText = function (textName, callback) {
+	request.get('/texter/' + textName, function (res) {
+		if (res.status === 200) {
+			callback(res.text);
+		}
+	});
+};
+
 exports.get = request.get;
