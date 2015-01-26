@@ -1,32 +1,9 @@
-<div class="reviews">
-    <img class="reviewAlbums" src="https://i.scdn.co/image/5a7c9e70c15be1dbc8c3067647890c53012b4145"> <br>
-    <a href="http://hn.se/nojekultur/recensioner/skivrecensioner/1.1811913-osig-rockplatta-av-varbergaren-david-miles" target="_blank">2012-10-24, Hallands Nyheter</a>
-    <br>
-    <a href="http://allehanda.se/noje/skivor/1.5246012-svensk-springsteen-rock" target="_blank">2012-10-24, Ångermanland och Örnsköldsviks Allehanda</a>
-    <br>
-    <a href="http://kulturbloggen.com/?p=62225" target="_blank">2012-10-29, Kulturbloggen</a>
-    <br>
-    <a href="http://www.unt.se/kultur/skivor/david-miles-tiden-ar-ett-jetplan-1947694.aspx" target="_blank">2012-11-07, Upsala Nya Tidning</a>
-    <br>
-    <a href="img/121107_VP_recension.pdf" target="_blank">2012-11-07, Varbergsposten</a>
-    <br>
-    <a href="http://www.nwt.se/noje/skivor/article1199059.ece" target="_blank">2012-11-09, Nya Wermlands-Tidningen</a>
-    <br>
-    <a href="img/121108_PD_recension.png" target="_blank">2012-11-07, Provinstidningen Dalsland</a>
-    <br>
-    <a href="http://ikon1931.se/recensioner/ratt-trallvanligt" target="_blank">2012-11-28, IKON1931</a>
-    <br>
-    <a href="http://joyzine.se/?p=5834" target="_blank">2012-12-01, Joyzine</a>
-    <br>
+<div class="reviews" data-bind="foreach: albums">
+    <img class="reviewAlbums" src="" data-bind="attr: {src: albumImage}">
 
-
-    <br>
-    <img class="reviewAlbums" src="https://i.scdn.co/image/2ee80579be624dc4df6ac079a1a573b94ce08e71"> <br>
-    <a href="img/110414_PD_recension.pdf" target="_blank">2011-04-14, Provinstidningen Dalsland</a>
-    <br>
-    <a href="http://allehanda.se/noje/skivor/1.2973247-ny-bekantskap-som-sticker-ut" target="_blank">2011-04-20, Ångermanland och Örnsköldsviks Allehanda</a>
-    <br>
-    <a href="http://hallandsposten.se/nojekultur/recensioner/skivrecensioner/1.1189653-kompetent-trubadurrock-av-hallandsk-sangare" target="_blank">2011-04-20, Hallandsposten</a>
-    <br>
-    <br>
+    <div data-bind="foreach: reviews">
+        <div>
+            <a href="" target="_blank" data-bind="attr: {href: link}, text: text"></a>
+        </div>
+    </div>
 </div>
