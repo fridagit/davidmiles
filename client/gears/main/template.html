@@ -2,7 +2,7 @@
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
+                <button type="button" class="navbar-toggle animated rollIn" data-toggle="offcanvas" data-target=".sidebar-nav"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button>
                 <img class="drawerPhoto" src="/img/drawer_photo.jpg"/>
                 <img class="logo" src="/img/logo.png"/>
             </div>
@@ -12,11 +12,11 @@
         <div class="row row-offcanvas row-offcanvas-left">
             <div class="col-xs-6 col-sm-2 sidebar-offcanvas" id="sidebar" role="navigation">
                 <ul class="nav" data-bind="foreach: sections">
-                    <li class="item" data-bind="click: select, css: {'item-selected' : selected(), 'menu-header': header}, text:text"></li>
+                    <li class="item" data-bind="click: select, css: {'item-selected' : selected(), 'animated flash': initPage(), 'menu-header': header}, text:text"></li>
                 </ul>
             </div>
 
-            <div class="col-xs-12 col-sm-10 mainContent">
+            <div class="col-xs-12 col-sm-10 mainContent" data-bind="if: mainContent()">
                 <!--ko if: mainContent()-->
                 <div data-bind="component: {name: mainContent}"></div>
                 <!--/ko-->

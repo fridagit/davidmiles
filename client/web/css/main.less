@@ -206,3 +206,14 @@ pre {
   background-color: white;
   border: 0;
 }
+
+.hiddenLyrics {
+  max-height: 0;
+  .transition(max-height 0.5s ease-out);
+  overflow: hidden;
+}
+
+.visibleLyrics {
+  max-height: 1000px;
+  .transition(max-height 0.5s ease-in);
+}

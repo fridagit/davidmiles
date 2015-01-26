@@ -18,6 +18,7 @@ var viewModel = {
             var selected = localStorage.getItem('selected-section');
             sections.forEach(function (section, index) {
                 section.selected = ko.observable(false);
+                section.initPage = ko.observable(false);
                 section.header = section.header || false;
                 section.id = section.id || section.text.toLowerCase();
                 section.select = function () {
@@ -34,9 +35,11 @@ var viewModel = {
                 if (selected) {
                     if (section.id === selected) {
                         section.select();
+                        section.initPage(true);
                     }
                 } else if (section.startPage) {
                     section.select();
+                    section.initPage(true);
                 }
                 self.sections.push(section);
             });

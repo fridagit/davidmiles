@@ -1,4 +1,4 @@
 <div data-bind="foreach: lyrics">
-    <div><a href="" data-bind="text: title, click: click"></a></div>
-    <pre data-bind="text: text, visible: selected"></pre>
+    <div><a href="" data-bind="text: title, click: click, css: {'bold animated pulse': selected()}"></a></div>
+    <pre class="hiddenLyrics" data-bind="text: text, css: {'visibleLyrics': selected}"></pre>
 </div>
