@@ -1,9 +1,10 @@
-<div class="reviews" data-bind="foreach: albums">
+<div class="reviews" data-bind="foreach: items">
+    <!--ko if: hasImage-->
     <img class="reviewAlbums" src="" data-bind="attr: {src: albumImage}">
-
-    <div data-bind="foreach: reviews">
-        <div>
-            <a href="" target="_blank" data-bind="attr: {href: link}, text: text"></a>
-        </div>
+    <!--/ko-->
+    <!--ko if: hasText -->
+    <div>
+        <a href="" target="_blank" data-bind="attr: {href: link}, text: text"></a>
     </div>
+    <!--/ko-->
 </div>
