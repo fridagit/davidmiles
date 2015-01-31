@@ -1,1 +1,20 @@
-<iframe-list params="items:albums, playIconClass: 'normal'"></iframe-list>
+<div data-bind="foreach: albums">
+    <div class="card discography">
+        <div class="discoInfo">
+            <div class="discoYear" data-bind="text: date"></div>
+            <div horizontal layout justified>
+                <div class="discoTitle" data-bind="text: title"></div>
+                <div class="discoTrackCount"><span data-bind="text: trackCount() + ' spår'"></span></div>
+            </div>
+        </div>
+        <div style="background-size: 100%" data-bind="style: {backgroundImage: image, width: width, height: height}">
+        </div>
+        <div class="discoLinks" horizontal end-justified layout center>
+            <a href="" target="_blank" data-bind="visible: shopUrl, attr:{href: shopUrl}">
+                <img class="shoppingCart" src="img/shopping-cart.png" border="0">
+            </a>
+            <a href="" target="_blank" data-bind="attr:{href: iTunesUrl}"><img src="img/itunes.png" border="0"></a>
+            <a href="" target="_blank" data-bind="attr:{href: spotifyUrl}"><img src="img/spotify-logo-32x32-no-tagline.png" border="0"></a>
+        </div>
+    </div>
+</div>
