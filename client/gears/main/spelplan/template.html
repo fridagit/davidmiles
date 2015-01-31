@@ -18,8 +18,10 @@
 <div data-bind="if:history().length > 0">
     <div class="red">Tidigare</div>
     <div data-bind="foreach: history">
-        <span class="bold" data-bind="text: date"></span>
-        <span data-bind="text: place"></span>
+        <div>
+            <span class="bold" data-bind="text: date"></span>
+            <span data-bind="text: place"></span>
+        </div>
     </div>
 </div>
 
