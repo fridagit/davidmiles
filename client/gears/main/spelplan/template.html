@@ -1,5 +1,8 @@
 <img src="/img/spelplan.jpg" class="card floatRight halfWidth"/>
 
+<div data-bind="visible:loading">Läser in spelplanen...</div>
+
+<!--ko if: !loading()-->
 <div class="marginBottom bigger" data-bind="with: first">
     <div class="red">Nästa spelning <span data-bind="text: distance"></span></div>
     <div>Datum: <span data-bind="text: date"></span></div>
@@ -24,4 +27,4 @@
         </div>
     </div>
 </div>
-
+<!--/ko-->

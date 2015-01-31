@@ -6,7 +6,9 @@ module.exports = {
         this.first = ko.observable();
         this.upcoming = ko.observableArray();
         this.history = ko.observableArray();
+        this.loading = ko.observable(true);
         request.getJson('spelplan', function (gigs) {
+            self.loading(false);
             gigs.forEach(function (gig) {
                 var gigDate = new Date(gig.date);
                 var now = new Date();
