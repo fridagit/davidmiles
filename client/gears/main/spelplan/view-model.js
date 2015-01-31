@@ -27,7 +27,7 @@ module.exports = {
                         self.upcoming.push(gig);
                     }
                 } else {
-                    self.history.push(gig);
+                    self.history.unshift(gig);
                 }
             });
         });
