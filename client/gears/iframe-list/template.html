@@ -1,5 +1,5 @@
 <div class="lazyIFrames" data-bind="foreach: items">
-    <div class="card">
+    <div class="card" data-bind="style: {width: width}">
         <div class="iFrameTitle" data-bind="text: title"></div>
         <paper-shadow z="2" style="background-size: 100%" data-bind="style: {backgroundImage: image, width: width, height: height}">
             <div data-bind="click: $parent.click, css: $parent.playIconClass">
