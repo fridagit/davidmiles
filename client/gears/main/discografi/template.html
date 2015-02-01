@@ -1,3 +1,6 @@
+<div data-bind="visible:loading">Läser in album...</div>
+
+<!--ko if: !loading()-->
 <div data-bind="if: albums().length === 0">
     Inga album upplagda för tillfället. Återkom gärna senare!
 </div>
@@ -21,3 +24,4 @@
         </div>
     </div>
 </div>
+<!--/ko-->

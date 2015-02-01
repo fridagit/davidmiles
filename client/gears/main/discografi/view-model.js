@@ -4,7 +4,9 @@ module.exports = {
     init: function () {
         var self = this;
         self.albums = ko.observableArray();
+        this.loading = ko.observable(true);
         request.getJson('spotify_albums', function (albums) {
+            self.loading(false);
             albums.forEach(function (album) {
                 album.spotifyUrl = 'http://open.spotify.com/album/' + album.spotifyId;
                 album.iTunesUrl = 'https://itunes.apple.com/us/album/' + album.iTunesId;
@@ -26,11 +28,9 @@ module.exports = {
                                 album.image('url(' + image.url + ')');
                             }
                         });
-                    } else {
-                        self.albums.remove(album);
+                        self.albums.push(album);
                     }
                 });
-                self.albums.push(album);
             });
         });
     }
