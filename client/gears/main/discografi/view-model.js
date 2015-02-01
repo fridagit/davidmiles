@@ -16,15 +16,19 @@ module.exports = {
                 album.width = '250px';
                 album.height = '250px';
                 request.get('https://api.spotify.com/v1/albums/' + album.spotifyId, function (result) {
-                    var images = result.body.images;
-                    album.title(result.body.name);
-                    album.date(result.body['release_date'].replace(/-.*/, ''));
-                    album.trackCount(result.body.tracks.items.length);
-                    images.forEach(function (image) {
-                        if (image.height === 300) {
-                            album.image('url(' + image.url + ')');
-                        }
-                    });
+                    if (!result.body.error) {
+                        var images = result.body.images;
+                        album.title(result.body.name);
+                        album.date(result.body['release_date'].replace(/-.*/, ''));
+                        album.trackCount(result.body.tracks.items.length);
+                        images.forEach(function (image) {
+                            if (image.height === 300) {
+                                album.image('url(' + image.url + ')');
+                            }
+                        });
+                    } else {
+                        self.albums.remove(album);
+                    }
                 });
                 self.albums.push(album);
             });

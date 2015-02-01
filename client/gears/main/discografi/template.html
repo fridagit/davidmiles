@@ -1,3 +1,6 @@
+<div data-bind="if: albums().length === 0">
+    Inga album upplagda för tillfället. Återkom gärna senare!
+</div>
 <div data-bind="foreach: albums">
     <div class="card discography">
         <div class="discoInfo">
