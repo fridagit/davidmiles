@@ -1,11 +1,11 @@
-<div data-bind="visible:loading">Läser in album...</div>
+<div data-bind="visible:loading" class="animated fadeIn">Läser in album...</div>
 
 <!--ko if: !loading()-->
 <div data-bind="if: albums().length === 0">
     Inga album upplagda för tillfället. Återkom gärna senare!
 </div>
 <div data-bind="foreach: albums">
-    <div class="card discography" data-bind="if: hasImage">
+    <div class="card discography animated fadeIn" data-bind="if: hasImage">
         <div class="discoInfo">
             <div class="discoYear" data-bind="text: date"></div>
             <div horizontal layout justified>
