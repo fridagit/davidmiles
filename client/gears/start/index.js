@@ -10,12 +10,16 @@ exports.start = function () {
         }
     );
     router.on('/:page', function (ctx) {
-            if (!firstRender) {
-                bus.publish('main-content', ctx.params.page);
-            } else {
-                firstRender = false;
-                localStorage.setItem('selected-section', ctx.params.page);
-                main.render();
+            var page = ctx.params.page;
+            if (page.indexOf('#') === 0) {
+                page = page.substr(1);
+                if (!firstRender) {
+                    bus.publish('main-content', page);
+                } else {
+                    firstRender = false;
+                    localStorage.setItem('selected-section', page);
+                    main.render();
+                }
             }
         }
     );

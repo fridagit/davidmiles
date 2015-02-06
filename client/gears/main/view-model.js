@@ -26,7 +26,7 @@ var viewModel = {
                 });
                 section.select = function () {
                     if (!section.header) {
-                        router.navigate('/' + section.id);
+                        router.navigate('/#' + section.id);
                         document.querySelector('#sidebar').parentElement.className = 'row row-offcanvas row-offcanvas-left';
                     }
                 };
