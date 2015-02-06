@@ -17,6 +17,9 @@ module.exports = {
                 album.image = ko.observable();
                 album.width = '250px';
                 album.height = '250px';
+                album.hasImage = ko.computed(function() {
+                    return album.image() !== undefined;
+                });
                 request.get('https://api.spotify.com/v1/albums/' + album.spotifyId, function (result) {
                     if (!result.body.error) {
                         var images = result.body.images;
@@ -28,9 +31,11 @@ module.exports = {
                                 album.image('url(' + image.url + ')');
                             }
                         });
-                        self.albums.push(album);
+                    } else {
+                        self.albums.remove(album);
                     }
                 });
+                self.albums.push(album);
             });
         });
     }
