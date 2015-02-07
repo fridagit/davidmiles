@@ -3,7 +3,7 @@ var template = require('./template');
 var viewModel = require('./view-model').create();
 var request = require('data-request');
 
-
+var urlPage;
 
 exports.init = function () {
     request.getJson('menu', function (sections) {
@@ -24,10 +24,11 @@ exports.init = function () {
                 ko.components.register(name, component);
             }
         });
-        viewModel.createSections();
+        viewModel.createSections(urlPage);
     });
 };
 
-exports.render = function () {
+exports.render = function (page) {
+    urlPage = page;
     layoutEngine.render(template, viewModel, 'site');
 };

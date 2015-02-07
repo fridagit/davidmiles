@@ -17,8 +17,7 @@ exports.start = function () {
                     bus.publish('main-content', page);
                 } else {
                     firstRender = false;
-                    localStorage.setItem('selected-section', page);
-                    main.render();
+                    main.render(page);
                 }
             }
         }

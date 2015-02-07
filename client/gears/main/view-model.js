@@ -10,18 +10,16 @@ var viewModel = {
         bus.subscribe('main-content', function (item) {
             var section = item.data.toLowerCase();
             self.mainContent(section);
-            localStorage.setItem('selected-section', section);
         });
     },
-    createSections: function () {
+    createSections: function (selected) {
         var self = this;
         request.getJson('menu', function (sections) {
-            var selected = localStorage.getItem('selected-section');
             sections.forEach(function (section, index) {
                 section.initPage = ko.observable(false);
                 section.header = section.header || false;
                 section.id = section.id || section.text.toLowerCase();
-                section.selected = ko.computed(function() {
+                section.selected = ko.computed(function () {
                     return section.id === self.mainContent();
                 });
                 section.select = function () {
@@ -41,9 +39,7 @@ var viewModel = {
             if (selected)  {
                 bus.publish('main-content', selected);
             }
-
         });
-
     }
 };
 
