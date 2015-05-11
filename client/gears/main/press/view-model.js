@@ -11,6 +11,13 @@ module.exports = {
                 }
             );
         }
-        this.images = images;
+        this.press = images;
+
+        this.posters = [
+            {
+                thumb: 'img/affisch/david_miles_A3.jpg',
+                url: 'img/affisch/david_miles_A3.pdf'
+            }
+        ];
     }
 };

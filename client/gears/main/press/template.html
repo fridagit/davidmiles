@@ -5,9 +5,19 @@
     <a href="/img/120625_davidmiles.se_pressmeddelande.pdf" target="_blank">2012-06-25 David Miles ger ut ny skiva hösten 2012!</a>
 
 
+    <b class="pressImages">Affisch (PDF)</b>
+
+    <div data-bind="foreach: posters">
+        <paper-shadow z="2" class="card">
+            <a data-bind="attr: {href: url}" >
+                <img data-bind="attr: {src: thumb}">
+            </a>
+        </paper-shadow>
+    </div>
+
     <b class="pressImages">Pressbilder</b>
 
-    <div data-bind="foreach: images">
+    <div data-bind="foreach: press">
         <paper-shadow z="2" class="card">
             <a data-bind="attr: {href: url, 'data-title': downloadLink}" data-lightbox="image-1" data-title="">
                 <img data-bind="attr: {src: thumb}">
