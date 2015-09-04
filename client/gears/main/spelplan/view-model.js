@@ -7,27 +7,32 @@ module.exports = {
         this.upcoming = ko.observableArray();
         this.history = ko.observableArray();
         this.loading = ko.observable(true);
-        request.getJson('spelplan', function (gigs) {
+        request.getTxt('spelplan', function (gigs) {
             self.loading(false);
-            gigs.forEach(function (gig) {
-                var gigDate = new Date(gig.date);
-                var now = new Date();
-                now.setHours(0, 0, 0, 0);
-                gigDate.setHours(0, 0, 0, 0);
-                if (now <= gigDate) {
-                    if (!self.first()) {
-                        var diff = dayDiff(now, gigDate);
-                        if (diff === 0) {
-                            gig.distance = 'är idag!';
+            gigs.split('\n').forEach(function (line) {
+                var gig = {};
+                gig.date = parseDate(line);
+                if (gig.date) {
+                    gig.place = line.replace(gig.date, '');
+                    var gigDate = new Date(gig.date);
+                    var now = new Date();
+                    now.setHours(0, 0, 0, 0);
+                    gigDate.setHours(0, 0, 0, 0);
+                    if (now <= gigDate) {
+                        if (!self.first()) {
+                            var diff = dayDiff(now, gigDate);
+                            if (diff === 0) {
+                                gig.distance = 'är idag!';
+                            } else {
+                                gig.distance = 'är om ' + diff + ' dagar';
+                            }
+                            self.first(gig);
                         } else {
-                            gig.distance = 'är om ' + diff + ' dagar';
+                            self.upcoming.push(gig);
                         }
-                        self.first(gig);
                     } else {
-                        self.upcoming.push(gig);
+                        self.history.unshift(gig);
                     }
-                } else {
-                    self.history.unshift(gig);
                 }
             });
         });
@@ -37,4 +42,13 @@ module.exports = {
 
 function dayDiff(first, second) {
     return parseInt((second - first) / (1000 * 60 * 60 * 24));
+}
+
+function parseDate(line) {
+    var matches = line.match(/\d\d\d\d-\d\d-\d\d( \d\d?:\d\d)?/);
+    if (matches && matches.length) {
+        var gig = {};
+        return matches[0];
+    }
+    return undefined;
 }

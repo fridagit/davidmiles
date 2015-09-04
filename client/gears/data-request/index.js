@@ -9,7 +9,15 @@ exports.getJson = function (jsonName, callback) {
 	});
 };
 
-exports.getText = function (textName, callback) {
+exports.getTxt = function (txtName, callback) {
+	request.get('/json/' + txtName + '.txt', function (res) {
+		if (res.status === 200) {
+			callback(res.text);
+		}
+	});
+};
+
+exports.getLyrics = function (textName, callback) {
 	request.get('/texter/' + textName, function (res) {
 		if (res.status === 200) {
 			callback(res.text);
