@@ -3,7 +3,7 @@
 <div data-bind="visible:loading" class="animated fadeIn">Läser in spelplanen...</div>
 
 <!--ko if: !loading()-->
-<editable params="fileName: 'spelplan.txt', textToEdit: gigs, editMode: editMode"></editable>
+<editable params="fileName: 'json/spelplan.txt', textToEdit: gigs, editMode: editMode"></editable>
 <div class="animated fadeIn" data-bind="visible: !editMode()">
     <div class="marginBottom bigger" data-bind="with: first">
         <div class="red">Nästa spelning <span data-bind="text: distance"></span></div>

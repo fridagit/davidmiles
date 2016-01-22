@@ -8,6 +8,9 @@ module.exports = {
         request.getJson('texter', function (lyricsList) {
             lyricsList.forEach(function (lyricsItem) {
                 request.getLyrics(lyricsItem.textFile, function (text) {
+                    lyricsItem.fileName = 'texter/' + lyricsItem.textFile;
+                    lyricsItem.originalText = ko.observable(text);
+                    lyricsItem.editMode = ko.observable(false);
                     lyricsItem.text = text.replace(/(?:\r\n|\r|\n)/g, '<br>');
                     lyricsItem.selected = ko.observable(false);
                     lyricsItem.click = function () {

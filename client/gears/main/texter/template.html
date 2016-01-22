@@ -1,4 +1,5 @@
 <div data-bind="foreach: lyrics">
     <div class="animated fadeIn"><a href="" data-bind="text: title, click: click, css: {'bold animated pulse': selected()}"></a></div>
-    <div class="hiddenLyrics" data-bind="html: text, css: {'visibleLyrics': selected}"></div>
+    <editable params="fileName: fileName, textToEdit: originalText, editMode: editMode" data-bind="visible: selected"></editable>
+    <div class="hiddenLyrics" data-bind="html: text, css: {'visibleLyrics': selected}, visible: !editMode()"></div>
 </div>
