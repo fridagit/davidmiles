@@ -7,8 +7,11 @@ module.exports = {
         this.upcoming = ko.observableArray();
         this.history = ko.observableArray();
         this.loading = ko.observable(true);
+        this.editMode = ko.observable(false);
+        this.gigs = ko.observable();
         request.getTxt('spelplan', function (gigs) {
             self.loading(false);
+            self.gigs(gigs);
             gigs.split('\n').forEach(function (line) {
                 var gig = {};
                 gig.date = parseDate(line);

@@ -1,12 +1,14 @@
 var bus = require('message-bus');
 var request = require('data-request');
 var router = require('router');
+var login = require('login');
 
 var viewModel = {
     init: function () {
         var self = this;
         self.mainContent = ko.observable('');
         self.sections = ko.observableArray();
+        self.loggedIn = login.isLoggedIn();
         bus.subscribe('main-content', function (item) {
             var section = item.data.toLowerCase();
             self.mainContent(section);

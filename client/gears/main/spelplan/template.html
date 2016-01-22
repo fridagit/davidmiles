@@ -1,9 +1,10 @@
-<img src="/img/spelplan.jpg" class="card floatRight halfWidth"/>
+<img src="/img/spelplan.jpg" class="card floatRight halfWidth" data-bind="visible: !editMode()"/>
 
 <div data-bind="visible:loading" class="animated fadeIn">Läser in spelplanen...</div>
 
 <!--ko if: !loading()-->
-<div class="animated fadeIn">
+<editable params="fileName: 'spelplan.txt', textToEdit: gigs, editMode: editMode"></editable>
+<div class="animated fadeIn" data-bind="visible: !editMode()">
     <div class="marginBottom bigger" data-bind="with: first">
         <div class="red">Nästa spelning <span data-bind="text: distance"></span></div>
         <div>Datum: <span data-bind="text: date"></span></div>
