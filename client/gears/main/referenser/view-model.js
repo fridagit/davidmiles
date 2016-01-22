@@ -1,13 +1,18 @@
 var request = require('data-request');
+var utils = require('dm-utils');
 
 module.exports = {
     init: function () {
         this.references = ko.observableArray();
-        request.getJson('referenser', function(references) {
-            references.forEach(function(reference) {
-               reference.text = '”' + reference.text + '”';
+        var self = this;
+        self.referencesString = ko.observable('');
+        request.getTxt('referenser', function (referencesString) {
+            self.referencesString(referencesString);
+            var items = utils.parseTextToItems(referencesString);
+            items.forEach(function(item) {
+                item.text = '”' + item.text + '”';
             });
-            this.references(references);
+            self.references(items);
         }.bind(this));
     }
 };
