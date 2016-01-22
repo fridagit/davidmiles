@@ -5,7 +5,7 @@ var webStorage = require('web-storage');
 var viewModel = {
     init: function () {
         this.password = ko.observable();
-        this.css = ko.observable();
+        this.unauthorized = ko.observable(false);
     },
 
     login: function () {
@@ -20,10 +20,8 @@ var viewModel = {
 };
 
 function handleLoginResponse(res) {
-    if (res.unauthorized) {
-        this.css('redBackground');
-    } else {
-        this.css('');
+    this.unauthorized(res.unauthorized);
+    if (!res.unauthorized) {
         webStorage.store('session', 'password', this.password());
         router.navigate('/#hem');
     }

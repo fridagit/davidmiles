@@ -1,6 +1,6 @@
 <div vertical layout class="login">
     <label for="password">Lösenord</label>
-    <input id="password" type="password" autofocus data-bind="textInput: password, event: {keypress: submit}, css: css">
+    <input id="password" type="password" autofocus data-bind="textInput: password, event: {keypress: submit}, css: {'redBackground': unauthorized}">
     <button class="marginTop" data-bind="click: login">LOGGA IN</button>
 </div>
 

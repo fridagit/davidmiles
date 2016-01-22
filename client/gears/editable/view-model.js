@@ -7,9 +7,6 @@ var viewModel = {
         this.fileName = params.fileName;
         this.isLoggedIn = login.isLoggedIn;
         this.editMode = params.editMode;
-        this.css = ko.computed(function () {
-            return this.editMode() ? 'editBox' : '';
-        }, this);
     },
 
     edit: function () {
