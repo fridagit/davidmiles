@@ -5,7 +5,7 @@ if (isAuthorized()) {
     $name = urldecode($_GET["name"]);
     if (!IsNullOrEmptyString($name)) {
         $body = file_get_contents('php://input');
-        file_put_contents(__DIR__ . "/../" . $name, $body);
+        file_put_contents(__DIR__ . "/../txt/" . $name . ".txt", $body);
     }
 }
 
