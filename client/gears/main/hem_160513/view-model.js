@@ -1,4 +1,5 @@
 var request = require('utils/request');
+var apiKey = 'AIzaSyBKplqq_V9dmIO1y8oD73kaj5rwnRSS_d4';
 
 module.exports = {
     init: function () {
@@ -14,8 +15,9 @@ module.exports = {
             height: '180px',
             fill: true
         };
-        request('GET', 'http://gdata.youtube.com/feeds/api/videos/' + video.id + '?alt=json').end(function (result) {
-            video.title(result.body.entry.title.$t);
+        request('GET', 'https://www.googleapis.com/youtube/v3/videos?key=' + apiKey +
+            '&fields=items(snippet(title))&part=snippet&id=' + video.id).end(function (result) {
+            video.title(result.body.items[0].snippet.title);
         });
         self.videos([video]);
 
