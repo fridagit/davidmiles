@@ -1,11 +1,11 @@
 var router = require('router');
-var main = require('main');
+var pages = require('pages');
 var bus = require('message-bus');
 
 exports.start = function () {
     var firstRender = true;
     router.on('/', function (ctx) {
-            main.render();
+            pages.render();
             firstRender = false;
         }
     );
@@ -17,7 +17,7 @@ exports.start = function () {
                     bus.publish('main-content', page);
                 } else {
                     firstRender = false;
-                    main.render(page);
+                    pages.render(page);
                 }
             }
         }
