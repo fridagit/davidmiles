@@ -8,7 +8,7 @@ rsync --archive --delete $DEST_DIR"texter" $CLIENT_ROOT"web/"
 rsync --archive --delete $DEST_DIR"json" $CLIENT_ROOT"web/"
 rsync --archive --ignore-existing -- $DEST_DIR"img" $CLIENT_ROOT"web/"
 
-echo "Ready to upload? Press enter to perform dry-run? Otherwise press ctrl+C."
+echo "Ready to upload? Press enter to perform dry-run. Otherwise press ctrl+C."
 read
 rsync -n --verbose --archive --delete --chmod=Du=rwx,go=rx,Fu=rwx,og=rx  $SRC_DIR $DEST_DIR |grep -v "components/"
 echo "Dry run looks ok? Otherwise press ctrl+c"
