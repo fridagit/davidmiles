@@ -1,7 +1,15 @@
 [
   {
     "text": "Hem",
-    "startPage": true
+    "id" : "hem_160510",
+    "startPage": true,
+    "hidden": false
+  },
+  {
+    "text": "Hem",
+    "id" : "hem_160513",
+    "startPage": false,
+    "hidden": true
   },
   {
     "text": "Om"

@@ -16,25 +16,27 @@ var viewModel = {
         var self = this;
         request.getJson('menu', function (sections) {
             sections.forEach(function (section, index) {
-                section.initPage = ko.observable(false);
-                section.header = section.header || false;
-                section.id = section.id || section.text.toLowerCase();
-                section.selected = ko.computed(function () {
-                    return section.id === self.mainContent();
-                });
-                section.select = function () {
-                    if (!section.header) {
-                        router.navigate('/#' + section.id);
-                        document.querySelector('#sidebar').parentElement.className = 'row row-offcanvas row-offcanvas-left';
+                if (!section.hidden) {
+                    section.initPage = ko.observable(false);
+                    section.header = section.header || false;
+                    section.id = section.id || section.text.toLowerCase();
+                    section.selected = ko.computed(function () {
+                        return section.id === self.mainContent();
+                    });
+                    section.select = function () {
+                        if (!section.header) {
+                            router.navigate('/#' + section.id);
+                            document.querySelector('#sidebar').parentElement.className = 'row row-offcanvas row-offcanvas-left';
+                        }
+                    };
+                    if (!selected) {
+                        if (section.startPage) {
+                            section.select();
+                            section.initPage(true);
+                        }
                     }
-                };
-                if (!selected) {
-                    if (section.startPage) {
-                        section.select();
-                        section.initPage(true);
-                    }
+                    self.sections.push(section);
                 }
-                self.sections.push(section);
             });
             if (selected)  {
                 bus.publish('main-content', selected);
