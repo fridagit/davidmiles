@@ -5,7 +5,7 @@ module.exports = {
     init: function () {
         var self = this;
         this.videos = ko.observableArray();
-        var id = 'AXf7meAEQnU';
+        var id = 'u05Hcpy6ixs';
         var video = {
             id: id,
             iFrameUrl: 'https://www.youtube.com/embed/' + id + '?autoplay=1&autohide=1&origin=http://davidmiles.se',

@@ -2,14 +2,14 @@
   {
     "text": "Hem",
     "id" : "hem_160510",
-    "startPage": true,
-    "hidden": false
+    "startPage": false,
+    "hidden": true
   },
   {
     "text": "Hem",
     "id" : "hem_160513",
-    "startPage": false,
-    "hidden": true
+    "startPage": true,
+    "hidden": false
   },
   {
     "text": "Om"
