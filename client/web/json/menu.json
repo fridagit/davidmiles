@@ -12,14 +12,12 @@
   {
     "text": "Hem",
     "id" : "hem_160516",
-    "hidden": 0,
-    "startPage": 1
+    "hidden": 1
   },
   {
     "text": "Hem",
     "id" : "hem_160601",
-    "startPage": 0,
-    "hidden": 1
+    "startPage": 1
   },
   {
     "text": "Om"
