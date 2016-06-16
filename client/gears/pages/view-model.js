@@ -1,15 +1,17 @@
 var bus = require('message-bus');
 var request = require('data-request');
 var router = require('router');
+var login = require('login');
 
 var viewModel = {
     init: function () {
         var self = this;
         self.mainContent = ko.observable('');
         self.sections = ko.observableArray();
+        self.loggedIn = login.isLoggedIn();
         bus.subscribe('main-content', function (item) {
             var section = item.data.toLowerCase();
-            self.mainContent(section);
+            self.mainContent(section.replace('-','/'));
         });
     },
     createSections: function (selected) {
@@ -20,6 +22,9 @@ var viewModel = {
                     section.initPage = ko.observable(false);
                 section.header = section.header || false;
                 section.id = section.id || section.text.toLowerCase();
+                    if (section.category) {
+                        section.id = section.category + '-' + section.id;
+                    }
                 section.selected = ko.computed(function () {
                     return section.id === self.mainContent();
                 });

@@ -10,6 +10,9 @@ exports.init = function () {
         sections.forEach(function (section) {
             if (!section.header) {
                 var name = section.id || section.text.toLowerCase();
+                if (section.category) {
+                    name = section.category + '/' + name;
+                }
                 var component = {
                     viewModel: {
                         'createViewModel': function () {

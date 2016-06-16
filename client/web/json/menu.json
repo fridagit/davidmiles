@@ -36,26 +36,32 @@
     "header": true
   },
   {
-    "text": "Discografi"
+    "text": "Discografi",
+    "category": "artist"
   },
   {
-    "text": "Video"
+    "text": "Video",
+    "category": "artist"
   },
   {
-    "text": "Texter"
+    "text": "Texter",
+    "category": "artist"
   },
   {
-    "text": "Recensioner"
+    "text": "Recensioner",
+    "category": "artist"
   },
   {
-    "text": "Shop"
+    "text": "Shop",
+    "category": "artist"
   },
   {
-    "text": "Press"
+    "text": "Press",
+    "category": "artist"
   },
   {
     "text": "Bilder",
-    "id": "bilder-artist"
+    "category": "artist"
   },
   {
     "text": "TRUBADUREN",
@@ -63,13 +69,15 @@
   },
   {
     "text": "Bilder",
-    "id": "bilder-trubadur"
+    "category": "trubadur"
   },
   {
     "text": "Video",
-    "id": "video-trubadur"
+    "category": "trubadur",
+    "hidden": 1
   },
   {
-    "text": "Referenser"
+    "text": "Referenser",
+    "category": "trubadur"
   }
 ]

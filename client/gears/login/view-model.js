@@ -23,7 +23,7 @@ function handleLoginResponse(res) {
     this.unauthorized(res.unauthorized);
     if (!res.unauthorized) {
         webStorage.store('session', 'password', this.password());
-        router.navigate('/#hem');
+        router.navigate('/');
     }
 }
 
