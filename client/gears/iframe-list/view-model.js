@@ -3,6 +3,7 @@ var viewModel = {
         this.playIconClass = 'play ' + params.playIconClass;
         this.items = params.items;
         this.click = showIFrame;
+        this.iframeListClass = params.iframeListClass || 'lazyIFrames';
     }
 };
 

@@ -1,7 +1,26 @@
 [
   {
     "text": "Hem",
-    "startPage": true
+    "id" : "hem_160510",
+    "hidden": 1
+  },
+  {
+    "text": "Hem",
+    "id" : "hem_160513",
+    "hidden": 1
+  },
+  {
+    "text": "Hem",
+    "id" : "hem_160516",
+    "hidden": 1
+  },
+  {
+    "text": "Hem",
+    "id" : "hem_160601",
+    "startPage": 1
+  },
+  {
+    "text": "Om"
   },
   {
     "text": "Spelplan"

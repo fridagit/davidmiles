@@ -1,14 +1,12 @@
 var bus = require('message-bus');
 var request = require('data-request');
 var router = require('router');
-var login = require('login');
 
 var viewModel = {
     init: function () {
         var self = this;
         self.mainContent = ko.observable('');
         self.sections = ko.observableArray();
-        self.loggedIn = login.isLoggedIn();
         bus.subscribe('main-content', function (item) {
             var section = item.data.toLowerCase();
             self.mainContent(section);
@@ -18,7 +16,8 @@ var viewModel = {
         var self = this;
         request.getJson('menu', function (sections) {
             sections.forEach(function (section, index) {
-                section.initPage = ko.observable(false);
+                if (!section.hidden) {
+                    section.initPage = ko.observable(false);
                 section.header = section.header || false;
                 section.id = section.id || section.text.toLowerCase();
                 section.selected = ko.computed(function () {
@@ -44,6 +43,7 @@ var viewModel = {
                 };
                 section.showInMenu = ko.observable(section.showInMenu || true);
                 self.sections.push(section);
+                }
             });
             if (selected)  {
                 bus.publish('main-content', selected);
