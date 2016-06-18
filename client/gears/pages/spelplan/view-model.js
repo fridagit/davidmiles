@@ -13,32 +13,35 @@ module.exports = {
         request.getTxt('spelplan', function (gigs) {
             self.loading(false);
             self.gigs(gigs);
+            var now = new Date();
+            now.setHours(0, 0, 0, 0);
+            var upcoming = [];
             gigs.split('\n').forEach(function (line) {
                 var gig = {};
                 gig.date = parseDate(line);
                 if (gig.date) {
                     gig.place = line.replace(gig.date, '');
-                    var gigDate = new Date(gig.date);
-                    var now = new Date();
-                    now.setHours(0, 0, 0, 0);
-                    gigDate.setHours(0, 0, 0, 0);
-                    if (now <= gigDate) {
-                        if (!self.first()) {
-                            var diff = dayDiff(now, gigDate);
-                            if (diff === 0) {
-                                gig.distance = 'är idag!';
-                            } else {
-                                gig.distance = 'är om ' + diff + ' dagar';
-                            }
-                            self.first(gig);
-                        } else {
-                            self.upcoming.push(gig);
-                        }
+                    gig.dateObject = new Date(gig.date);
+                    gig.dateObject.setHours(0, 0, 0, 0);
+                    if (now <= gig.dateObject) {
+                        upcoming.push(gig);
                     } else {
                         self.history.unshift(gig);
                     }
                 }
             });
+            upcoming.sort(function(a,b) {
+                return a.dateObject - b.dateObject;
+            });
+            var first = upcoming[0];
+            var diff = dayDiff(now, first.dateObject);
+            if (diff === 0) {
+                first.distance = 'är idag!';
+            } else {
+                first.distance = 'är om ' + diff + ' dagar';
+            }
+            self.first(first);
+            self.upcoming(upcoming);
         });
 
     }
