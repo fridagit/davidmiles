@@ -1,4 +1,5 @@
 var request = require('data-request');
+var router = require('router');
 
 module.exports = {
     init: function () {

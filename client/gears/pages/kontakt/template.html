@@ -17,8 +17,14 @@
         Kontakta skivbolag på <a href="http://www.hansarenmusik.se" target="_blank">www.hansarenmusik.se</a>
     </div>
 
-    <div horizontal layout>
+    <div horizontal layout class="marginBottom">
         <div>Sidan är skapad av</div>
         <a class="spaced" href="https://se.linkedin.com/in/johanfrick">Johan Frick</a>
+    </div>
+
+    <div horizontal layout>
+        <div>Administatör: </div>
+        <a class="spaced" href="" data-bind="click: login, visible: !isLoggedIn()">Logga in</a>
+        <a class="spaced" href="" data-bind="click: logout, visible: isLoggedIn()">Logga ut</a>
     </div>
 </div>

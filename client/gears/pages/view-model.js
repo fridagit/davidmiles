@@ -40,13 +40,6 @@ var viewModel = {
                         section.initPage(true);
                     }
                 }
-                section.moveUp = function() {
-
-                };
-                section.moveDown = function() {
-
-                };
-                section.showInMenu = ko.observable(section.showInMenu || true);
                 self.sections.push(section);
                 }
             });

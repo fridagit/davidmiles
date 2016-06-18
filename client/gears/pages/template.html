@@ -15,11 +15,6 @@
                 <ul class="nav" data-bind="foreach: sections">
                     <li class="item" data-bind="css: {'item-selected' : selected(), 'animated flash': initPage(), 'menu-header': header}">
                         <div data-bind="click: select, text:text"></div>
-                        <div class="editMenuItem" data-bind="visible: $parent.loggedIn">
-                            <span data-bind="click: moveUp">↑</span>
-                            <span data-bind="click: moveDown">↓</span>
-                            <input type="checkbox" data-bind="checked: showInMenu">
-                        </div>
                     </li>
                 </ul>
             </div>

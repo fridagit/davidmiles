@@ -1,6 +1,8 @@
 var router = require('router');
 var pages = require('pages');
 var bus = require('message-bus');
+var webStorage = require('web-storage');
+var currentPage;
 
 exports.start = function () {
     var firstRender = true;
@@ -19,6 +21,8 @@ exports.start = function () {
                     firstRender = false;
                     pages.render(page);
                 }
+                webStorage.store('session', 'previousPage', currentPage);
+                currentPage = page;
             }
         }
     );

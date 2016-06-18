@@ -14,6 +14,11 @@ exports.getPassword = function() {
     return webStorage.retrieve('session', 'password');
 };
 
+exports.logout = function() {
+    webStorage.clear('session', 'password');
+    location.reload();
+};
+
 var component = {
     viewModel: {
         'createViewModel': viewModel.create

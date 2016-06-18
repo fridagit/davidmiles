@@ -23,7 +23,9 @@ function handleLoginResponse(res) {
     this.unauthorized(res.unauthorized);
     if (!res.unauthorized) {
         webStorage.store('session', 'password', this.password());
-        router.navigate('/');
+        var prevPage = webStorage.retrieve('session', 'previousPage');
+        router.navigate('/#' + prevPage);
+        location.reload();
     }
 }
 
