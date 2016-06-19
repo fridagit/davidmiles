@@ -15,8 +15,6 @@ var conflict = require('mobenga-check-conflict');
 var handlebarsStream = require('mobenga-handlebars-stream');
 var hash = require('gulp-hash');
 
-var pkg = require('./package.json');
-
 var node_env = process.env.NODE_ENV || 'development';
 
 console.log('Running gulp for environment: ' + node_env);
