@@ -87,7 +87,7 @@ gulp.task('clean', function () {
 
 gulp.task('copy', function () {
     return gulp.src([
-        'web/**/*', '!web/**/*.less', '!web/**/*.template.html'
+        'web/**/*', '!web/**/*.less', '!web/**/*.template.php'
     ]).pipe(gulp.dest(buildsDir));
 
 });
@@ -138,7 +138,7 @@ gulp.task('template', function () {
         cogwheels: {files: ['npm-libs/cogwheels-v*.js'], opts: opts}
     };
 
-    return handlebarsStream('web/index.template.html', data)
-        .pipe(rename('index.html'))
+    return handlebarsStream('web/index.template.php', data)
+        .pipe(rename('index.php'))
         .pipe(gulp.dest(buildsDir));
 });
