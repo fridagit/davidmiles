@@ -1,14 +1,12 @@
 <div data-bind="css: {'editBox': editMode}">
 
-    <div data-bind="visible: editMode()">
-        <label vertical layout>
+    <div data-bind="visible: editMode()" vertical layout>
             <textarea data-bind="textInput: textToEdit"></textarea>
 
             <div class="marginTop">
                 <button data-bind="click: cancel">ÅNGRA</button>
                 <button data-bind="click: save">SPARA</button>
             </div>
-        </label>
     </div>
 
     <button data-bind="click: edit, visible: !editMode() && isLoggedIn()">REDIGERA</button>
