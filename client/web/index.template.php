@@ -39,9 +39,9 @@ if (!isSSL() && !isLocalhost()) {
 
     <title>David Miles</title>
 
-    <script src="components/webcomponentsjs/webcomponents.min.js"></script>
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
 
-    <link rel="import" href="components/paper-shadow/paper-shadow.html">
+    <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
 
     {{#css}}
     <link rel="stylesheet" href="{{.}}">
