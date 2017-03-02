@@ -1,3 +1,11 @@
+Dev
+* cd client/web
+* bower install
+* cd client/
+* gulp build
+* php -S localhost:8888
+
+Deploy
 * Gå igenom lokala ändringar
 * Committa
 * Kör deploy.sh (från iTerm så att password trycks in automatiskt)
