@@ -5,3 +5,5 @@ node_modules
 tmp
 *.iml
 npm-debug.log
+components/
+bower_components/
