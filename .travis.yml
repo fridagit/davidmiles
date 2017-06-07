@@ -3,7 +3,7 @@ node_js:
   - "6"
 before_install:
   - cd client
-  - for a in `ls build-libs/ |grep -v "\."`; do npm link $a; done
+  - for a in `ls ../build-libs/ |grep -v "\."`; do npm link $a; done
 before_script:
   - npm install -g gulp-cli
 script: gulp
