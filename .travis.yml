@@ -4,6 +4,7 @@ node_js:
   - "6"
 before_install:
   - cd client
+  - npm link build-libs/*
 before_script:
   - npm install -g gulp-cli
 script: gulp
