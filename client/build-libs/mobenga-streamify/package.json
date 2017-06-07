@@ -1,0 +1,35 @@
+{
+  "name": "mobenga-streamify",
+  "version": "1.0.1",
+  "description": "Streamify will create a stream for gulp from a function (it implement the _transform method of a Transform Stream).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Mobenga/cogwheels.git"
+  },
+  "author": {
+    "name": "Markus Andersson",
+    "email": "markus.andersson@mobenga.com"
+  },
+  "license": "Mobenga",
+  "bugs": {
+    "url": "https://github.com/Mobenga/cogwheels/issues"
+  },
+  "homepage": "https://github.com/Mobenga/cogwheels",
+  "readmeFilename": "README.md",
+  "_id": "mobenga-streamify@1.0.1",
+  "_shasum": "b51b9487534946bca99b01a59d0642836bca3d95",
+  "_resolved": "https://npm.mobenga.com/mobenga-streamify/-/mobenga-streamify-1.0.1.tgz",
+  "_from": "mobenga-streamify@1.0.1",
+  "_npmVersion": "2.13.3",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {},
+  "dist": {
+    "shasum": "b51b9487534946bca99b01a59d0642836bca3d95",
+    "tarball": "https://npm.mobenga.com/mobenga-streamify/-/mobenga-streamify-1.0.1.tgz"
+  },
+  "readme": "ERROR: No README data found!"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "mobenga-handlebars-stream",
+  "version": "0.9.4",
+  "description": "use handlebars with gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": {
+    "name": "Markus Andersson",
+    "email": "markus.andersson@mobenga.com"
+  },
+  "license": "Mobenga",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Mobenga/cogwheels.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mobenga/cogwheels/issues"
+  },
+  "homepage": "https://github.com/Mobenga/cogwheels",
+  "dependencies": {
+    "event-stream": "^3.1.7",
+    "gulp": "^3.8.7",
+    "handlebars": "^2.0.0-alpha.4",
+    "lazypipe": "^0.2.2",
+    "mobenga-streamify": "^1.0.1",
+    "streamqueue": "^0.1.1"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.21.4"
+  },
+  "readmeFilename": "README.md",
+  "_id": "mobenga-handlebars-stream@0.9.4",
+  "_shasum": "4809f43da1974c3c5ff2b5e2a93c285421327bf6",
+  "_resolved": "https://npm.mobenga.com/mobenga-handlebars-stream/-/mobenga-handlebars-stream-0.9.4.tgz",
+  "_from": "mobenga-handlebars-stream@0.9.4",
+  "_npmVersion": "2.13.3",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {},
+  "dist": {
+    "shasum": "4809f43da1974c3c5ff2b5e2a93c285421327bf6",
+    "tarball": "https://npm.mobenga.com/mobenga-handlebars-stream/-/mobenga-handlebars-stream-0.9.4.tgz"
+  },
+  "readme": "ERROR: No README data found!"
+}

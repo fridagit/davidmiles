@@ -1,0 +1,45 @@
+{
+  "name": "mobenga-app-server",
+  "version": "1.0.2",
+  "description": "Host single page application",
+  "main": "app-server.js",
+  "bin": {
+    "app-server": "./app-server.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Mobenga/cogwheels.git"
+  },
+  "author": {
+    "name": "Robert Ödling",
+    "email": "robert.odling@mobenga.com"
+  },
+  "license": "Mobenga",
+  "bugs": {
+    "url": "https://github.com/Mobenga/cogwheels/issues"
+  },
+  "homepage": "https://github.com/Mobenga/cogwheels",
+  "dependencies": {
+    "commander": "~2.3.0",
+    "compression": "^1.0.11",
+    "connect": "^3.1.1",
+    "connect-modrewrite": "^0.7.9",
+    "serve-static": "^1.5.4"
+  },
+  "readmeFilename": "README.md",
+  "_id": "mobenga-app-server@1.0.2",
+  "_shasum": "9380b380d8ee89c5b5068b06ccdda134f3109630",
+  "_resolved": "https://npm.mobenga.com/mobenga-app-server/-/mobenga-app-server-1.0.2.tgz",
+  "_from": "mobenga-app-server@1.0.2",
+  "_npmVersion": "2.13.3",
+  "_nodeVersion": "0.12.7",
+  "_npmUser": {},
+  "dist": {
+    "shasum": "9380b380d8ee89c5b5068b06ccdda134f3109630",
+    "tarball": "https://npm.mobenga.com/mobenga-app-server/-/mobenga-app-server-1.0.2.tgz"
+  },
+  "readme": "ERROR: No README data found!"
+}
