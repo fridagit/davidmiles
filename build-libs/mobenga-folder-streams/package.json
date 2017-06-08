@@ -1,0 +1,76 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "mobenga-folder-streams@^1.0.2",
+        "scope": null,
+        "escapedName": "mobenga-folder-streams",
+        "name": "mobenga-folder-streams",
+        "rawSpec": "^1.0.2",
+        "spec": ">=1.0.2 <2.0.0",
+        "type": "range"
+      },
+      "/Users/johan.frick/Development/davidmiles/client/node_modules/mobenga-gear-streams"
+    ]
+  ],
+  "_from": "mobenga-folder-streams@>=1.0.2 <2.0.0",
+  "_id": "mobenga-folder-streams@1.0.2",
+  "_inCache": true,
+  "_location": "/mobenga-folder-streams",
+  "_nodeVersion": "6.9.1",
+  "_npmUser": {},
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "mobenga-folder-streams@^1.0.2",
+    "scope": null,
+    "escapedName": "mobenga-folder-streams",
+    "name": "mobenga-folder-streams",
+    "rawSpec": "^1.0.2",
+    "spec": ">=1.0.2 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/mobenga-gear-streams"
+  ],
+  "_resolved": "https://npm.mobenga.com/repository/npm-group/mobenga-folder-streams/-/mobenga-folder-streams-1.0.2.tgz",
+  "_shasum": "964f85938848b2285f1aea513b3955f2739e98dd",
+  "_shrinkwrap": null,
+  "_spec": "mobenga-folder-streams@^1.0.2",
+  "_where": "/Users/johan.frick/Development/davidmiles/client/node_modules/mobenga-gear-streams",
+  "author": {
+    "name": "Robert Ödling",
+    "email": "robert.odling@mobenga.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Mobenga/cogwheels/issues"
+  },
+  "dependencies": {
+    "event-stream": "^3.1.7"
+  },
+  "description": "Generate stream from folders",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.21.4",
+    "vinyl": "^0.3.2"
+  },
+  "dist": {
+    "shasum": "964f85938848b2285f1aea513b3955f2739e98dd",
+    "tarball": "https://npm.mobenga.com/repository/npm-group/mobenga-folder-streams/-/mobenga-folder-streams-1.0.2.tgz"
+  },
+  "homepage": "https://github.com/Mobenga/cogwheels",
+  "license": "Mobenga",
+  "main": "index.js",
+  "name": "mobenga-folder-streams",
+  "optionalDependencies": {},
+  "readme": "Generate stream from folders\r\n\r\n## install\r\n```bash\r\nnpm install mobenga-folder-streams --save-dev\r\n```\r\n\r\n## usage\r\n\r\n```js\r\n\r\nvar folderStreams = require('mobenga-folder-streams');\r\n\r\nfolderStreams(folderDir, filters, streamGenerator)\r\n\t\t\t// returns stream generated from folders\r\n\t\t\t.pipe(...);\r\n```\r\n\r\n\r\n## example\r\n\r\n```js\r\n\r\n// myFolders/foo/foo.js\r\n// myFolders/bar/bar.js\r\n// myFolders/ignore/ignore.js\r\n\r\nfunction shouldInclude(folder) {\r\n\treturn folder.indexOf('ignore')===-1;\r\n}\r\n\r\n\r\nfolderStreams([myFolders], [shouldInclude],\r\n\tfunction (folder) {\r\n\t\treturn gulp.src(folder + '/**/.js');\r\n\t})\r\n\t// stream containing foo.js and bar.js\r\n\t.pipe(...);\r\n```\r\n\r\n\r\n\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Mobenga/cogwheels.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "version": "1.0.2"
+}

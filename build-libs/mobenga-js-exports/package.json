@@ -1,0 +1,76 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "mobenga-js-exports@~1.0.3",
+        "scope": null,
+        "escapedName": "mobenga-js-exports",
+        "name": "mobenga-js-exports",
+        "rawSpec": "~1.0.3",
+        "spec": ">=1.0.3 <1.1.0",
+        "type": "range"
+      },
+      "/Users/johan.frick/Development/davidmiles/client/node_modules/mobenga-bundle-gears"
+    ]
+  ],
+  "_from": "mobenga-js-exports@>=1.0.3 <1.1.0",
+  "_id": "mobenga-js-exports@1.0.3",
+  "_inCache": true,
+  "_location": "/mobenga-js-exports",
+  "_nodeVersion": "6.9.1",
+  "_npmUser": {},
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "mobenga-js-exports@~1.0.3",
+    "scope": null,
+    "escapedName": "mobenga-js-exports",
+    "name": "mobenga-js-exports",
+    "rawSpec": "~1.0.3",
+    "spec": ">=1.0.3 <1.1.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/mobenga-bundle-gears"
+  ],
+  "_resolved": "https://npm.mobenga.com/repository/npm-group/mobenga-js-exports/-/mobenga-js-exports-1.0.3.tgz",
+  "_shasum": "b2519cf270c8225dc99a6d2a7162fddad2e2ca52",
+  "_shrinkwrap": null,
+  "_spec": "mobenga-js-exports@~1.0.3",
+  "_where": "/Users/johan.frick/Development/davidmiles/client/node_modules/mobenga-bundle-gears",
+  "author": {
+    "name": "Robert Ödling",
+    "email": "robert.odling@mobenga.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Mobenga/cogwheels/issues"
+  },
+  "dependencies": {
+    "mobenga-streamify": "~1.0.0"
+  },
+  "description": "js-exports will add module.exports",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.21.4",
+    "vinyl": "^0.3.2"
+  },
+  "dist": {
+    "shasum": "b2519cf270c8225dc99a6d2a7162fddad2e2ca52",
+    "tarball": "https://npm.mobenga.com/repository/npm-group/mobenga-js-exports/-/mobenga-js-exports-1.0.3.tgz"
+  },
+  "homepage": "https://github.com/Mobenga/cogwheels",
+  "license": "Mobenga",
+  "main": "index.js",
+  "name": "mobenga-js-exports",
+  "optionalDependencies": {},
+  "readme": "js-exports will add module.exports\r\n\r\n## install\r\n```bash\r\nnpm install mobenga-js-exports --save-dev\r\n```\r\n\r\n## usage\r\n\r\n```js\r\n\r\nvar jsexports = require('mobenga-js-exports');\r\n\r\ngulp.src('*.json')\r\n\t.pipe(jsexports());\r\n\r\n```\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Mobenga/cogwheels.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "version": "1.0.3"
+}

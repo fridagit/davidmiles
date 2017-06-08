@@ -1,0 +1,76 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "mobenga-gear-streams@^1.0.4",
+        "scope": null,
+        "escapedName": "mobenga-gear-streams",
+        "name": "mobenga-gear-streams",
+        "rawSpec": "^1.0.4",
+        "spec": ">=1.0.4 <2.0.0",
+        "type": "range"
+      },
+      "/Users/johan.frick/Development/davidmiles/client/node_modules/mobenga-bundle-gears"
+    ]
+  ],
+  "_from": "mobenga-gear-streams@>=1.0.4 <2.0.0",
+  "_id": "mobenga-gear-streams@1.0.4",
+  "_inCache": true,
+  "_location": "/mobenga-gear-streams",
+  "_nodeVersion": "6.9.1",
+  "_npmUser": {},
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "mobenga-gear-streams@^1.0.4",
+    "scope": null,
+    "escapedName": "mobenga-gear-streams",
+    "name": "mobenga-gear-streams",
+    "rawSpec": "^1.0.4",
+    "spec": ">=1.0.4 <2.0.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/mobenga-bundle-gears"
+  ],
+  "_resolved": "https://npm.mobenga.com/repository/npm-group/mobenga-gear-streams/-/mobenga-gear-streams-1.0.4.tgz",
+  "_shasum": "926fd04707cbdae42fd4ad130dd7e0d91ab9b114",
+  "_shrinkwrap": null,
+  "_spec": "mobenga-gear-streams@^1.0.4",
+  "_where": "/Users/johan.frick/Development/davidmiles/client/node_modules/mobenga-bundle-gears",
+  "author": {
+    "name": "Robert Ödling",
+    "email": "robert.odling@mobenga.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Mobenga/cogwheels/issues"
+  },
+  "dependencies": {
+    "mobenga-folder-streams": "^1.0.2"
+  },
+  "description": "Generate stream from gears",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "mocha": "^1.21.4",
+    "vinyl": "^0.3.2"
+  },
+  "dist": {
+    "shasum": "926fd04707cbdae42fd4ad130dd7e0d91ab9b114",
+    "tarball": "https://npm.mobenga.com/repository/npm-group/mobenga-gear-streams/-/mobenga-gear-streams-1.0.4.tgz"
+  },
+  "homepage": "https://github.com/Mobenga/cogwheels",
+  "license": "Mobenga",
+  "main": "index.js",
+  "name": "mobenga-gear-streams",
+  "optionalDependencies": {},
+  "readme": "Generate stream from gears.\r\n\r\n## install\r\n\r\n```bash\r\n$ npm install mobenga-gear-streams --save-dev\r\n```\r\n\r\n## usage\r\n\r\n```javascript\r\nvar gearStreams = require('mobenga-gear-streams');\r\n\r\ngearStreams(gearDirs, streamGenerator, filters)\r\n\t// returns stream generated from gear folders\r\n\t.pipe(...);\r\n```\r\n\r\n## example\r\n\r\nReading markdown files from gears:\r\n\r\n```javascript\r\nfunction streamGenerator(folder, pkg) {\r\n\treturn gulp.src(folder + '/*.md');\r\n}\r\n\r\ngearStreams(['gears/application', 'gears/domain'], streamGenerator)\r\n\t.pipe(size({ title: 'markdown', showFiles: true }));\r\n```\r\n\r\nGrab all JavaScript files from specific gear, using custom filter:\r\n\r\n```javascript\r\nfunction streamGenerator(folder, pkg) {\r\n\treturn gulp.src(folder + '/*.js');\r\n}\r\n\r\nfunction isMyGear(folder) {\r\n\treturn (path.basename(folder) === 'my-gear');\r\n}\r\n\r\ngearStreams(['gears/application', 'gears/domain'], streamGenerator, [isMyGear])\r\n\t.pipe(size({ title: 'js', showFiles: true }));\r\n```\r\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Mobenga/cogwheels.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "version": "1.0.4"
+}

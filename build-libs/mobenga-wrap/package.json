@@ -1,0 +1,77 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "mobenga-wrap@~0.0.3",
+        "scope": null,
+        "escapedName": "mobenga-wrap",
+        "name": "mobenga-wrap",
+        "rawSpec": "~0.0.3",
+        "spec": ">=0.0.3 <0.1.0",
+        "type": "range"
+      },
+      "/Users/johan.frick/Development/davidmiles/client/node_modules/mobenga-bundle-gears"
+    ]
+  ],
+  "_from": "mobenga-wrap@>=0.0.3 <0.1.0",
+  "_id": "mobenga-wrap@0.0.4",
+  "_inCache": true,
+  "_location": "/mobenga-wrap",
+  "_nodeVersion": "6.9.1",
+  "_npmUser": {},
+  "_npmVersion": "3.10.8",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "mobenga-wrap@~0.0.3",
+    "scope": null,
+    "escapedName": "mobenga-wrap",
+    "name": "mobenga-wrap",
+    "rawSpec": "~0.0.3",
+    "spec": ">=0.0.3 <0.1.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "/mobenga-bundle-gears"
+  ],
+  "_resolved": "https://npm.mobenga.com/repository/npm-group/mobenga-wrap/-/mobenga-wrap-0.0.4.tgz",
+  "_shasum": "f5d938b977a17686b9100348c66c04414c5a09da",
+  "_shrinkwrap": null,
+  "_spec": "mobenga-wrap@~0.0.3",
+  "_where": "/Users/johan.frick/Development/davidmiles/client/node_modules/mobenga-bundle-gears",
+  "author": {
+    "name": "Robert Ödling",
+    "email": "robert.odling@mobenga.com"
+  },
+  "bugs": {
+    "url": "https://github.com/Mobenga/cogwheels/issues"
+  },
+  "dependencies": {
+    "mobenga-streamify": "~1.0.0"
+  },
+  "description": "wraps a js module with cogwheels COMMONJS require statement",
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "event-stream": "^3.1.7",
+    "mocha": "^1.21.4",
+    "vinyl": "^0.3.2"
+  },
+  "dist": {
+    "shasum": "f5d938b977a17686b9100348c66c04414c5a09da",
+    "tarball": "https://npm.mobenga.com/repository/npm-group/mobenga-wrap/-/mobenga-wrap-0.0.4.tgz"
+  },
+  "homepage": "https://github.com/Mobenga/cogwheels",
+  "license": "Mobenga",
+  "main": "index.js",
+  "name": "mobenga-wrap",
+  "optionalDependencies": {},
+  "readme": "wraps a js module with cogwheels COMMONJS require statement\n\n## install\n```bash\nnpm install mobenga-wrap --save-dev\n```\n\n## usage\n```js\nvar wrap = require('mobenga-wrap');\n\ngulp.src('*.js')\n\t.pipe(wrap());\n\n```\n\t\n## PATCH NOTES\n\n### 0.0.4\nadded line breaks when wrapping modules to not break on ending comments.\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Mobenga/cogwheels.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "version": "0.0.4"
+}
