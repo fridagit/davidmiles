@@ -5,8 +5,13 @@ before_install:
   - mv build-libs client/node_modules 
   - cd client
 before_script:
+  - npm install -g bower
   - npm install -g gulp-cli
-script: gulp
+script: 
+  - cd web
+  - bower install
+  - cd ..
+  - gulp
 deploy:
   provider: pages
   skip_cleanup: true
