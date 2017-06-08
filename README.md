@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/johanfrick/davidmiles.svg?branch=master)](https://travis-ci.org/johanfrick/davidmiles)
+
 Dev
 * cd client/web
 * bower install
