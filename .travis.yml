@@ -11,6 +11,6 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: client/builds/web/development
+  local_dir: builds/web/development
   on:
     branch: master
