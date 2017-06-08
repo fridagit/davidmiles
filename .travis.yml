@@ -1,8 +1,11 @@
 language: node_js
 node_js:
   - "6"
+cache:
+  directories:
+  - client/node_modules
 before_install:
-  - mv build-libs client/node_modules 
+  - cp -avf build-libs/* client/node_modules/ 
   - cd client
 before_script:
   - npm install -g bower
