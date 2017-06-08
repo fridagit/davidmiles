@@ -7,3 +7,10 @@ before_install:
 before_script:
   - npm install -g gulp-cli
 script: gulp
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: client/builds/web/development/
+  on:
+    branch: master
