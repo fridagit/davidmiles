@@ -4,7 +4,10 @@ Dev
 * cd client/web
 * bower install
 * cd client/
+* npm set registry http://npm.mobenga.com
+* npm install
 * gulp build
+* cd builds/web/development
 * php -S localhost:8888
 
 Deploy
