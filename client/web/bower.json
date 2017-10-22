@@ -26,6 +26,6 @@
     }
   },
   "resolutions": {
-    "webcomponentsjs": "1.0.17"
+    "webcomponentsjs": "*"
   }
 }
