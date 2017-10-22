@@ -1,0 +1,68 @@
+[
+  {
+    "text": "Hem",
+    "id" : "hem_171022",
+    "startPage": 1
+  },
+  {
+    "text": "Om"
+  },
+  {
+    "text": "Spelplan"
+  },
+  {
+    "text": "Kontakt"
+  },
+  {
+    "text": "Podcast"
+  },
+  {
+    "text": "ARTISTEN",
+    "header": true
+  },
+  {
+    "text": "Discografi",
+    "category": "artist"
+  },
+  {
+    "text": "Video",
+    "category": "artist"
+  },
+  {
+    "text": "Texter",
+    "category": "artist"
+  },
+  {
+    "text": "Recensioner",
+    "category": "artist"
+  },
+  {
+    "text": "Shop",
+    "category": "artist"
+  },
+  {
+    "text": "Press",
+    "category": "artist"
+  },
+  {
+    "text": "Bilder",
+    "category": "artist"
+  },
+  {
+    "text": "TRUBADUREN",
+    "header": true
+  },
+  {
+    "text": "Bilder",
+    "category": "trubadur"
+  },
+  {
+    "text": "Video",
+    "category": "trubadur",
+    "hidden": 1
+  },
+  {
+    "text": "Referenser",
+    "category": "trubadur"
+  }
+]
