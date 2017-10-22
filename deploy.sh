@@ -1,6 +1,6 @@
 #!/bin/sh
 
-CLIENT_ROOT="~/Development/davidmiles/client/"
+CLIENT_ROOT="client/"
 SRC_DIR=$CLIENT_ROOT"builds/web/development/"
 DEST_DIR="davidmiles.se@ssh.davidmiles.se:/www/"
 
