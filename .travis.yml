@@ -16,6 +16,7 @@ script:
   - cd ..
   - gulp
 addons:
+  ssh_known_hosts: ssh.davidmiles.se
   apt:
     packages:
       - sshpass
