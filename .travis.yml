@@ -16,11 +16,11 @@ script:
   - cd ..
   - gulp
 addons:
-  ssh_known_hosts: $SSH_HOST
+  ssh_known_hosts: ssh.davidmiles.se
   apt:
     packages:
       - sshpass
 after_success:
   - export SSHPASS=$SSH_PASS
-  - sshpass -e rsync --archive --delete --chmod=Du=rwx,go=rx,Fu=rwx,og=rx builds/web/development/ $SSH_USER@$SSH_HOST:/www/
+  - sshpass -e rsync --archive --delete --chmod=Du=rwx,go=rx,Fu=rwx,og=rx "builds/web/development/" "$SSH_USER@ssh.davidmiles.se:/www/"
 
