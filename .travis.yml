@@ -22,5 +22,5 @@ addons:
       - sshpass
 after_success:
   - export SSHPASS=$ONE_COM_SSH
-  - sshpass -e rsync --archive --delete --chmod=Du=rwx,go=rx,Fu=rwx,og=rx "client/builds/web/development/" "davidmiles.se@ssh.davidmiles.se:/www/"
+  - sshpass -e rsync --archive --delete --chmod=Du=rwx,go=rx,Fu=rwx,og=rx "builds/web/development/" "davidmiles.se@ssh.davidmiles.se:/www/"
 
