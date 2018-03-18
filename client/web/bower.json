@@ -14,9 +14,8 @@
     "tests"
   ],
   "dependencies": {
-    "core-icons": "Polymer/core-icons#~0.5.2",
-    "core-elements": "Polymer/core-elements#~0.5.2",
-    "paper-elements": "Polymer/paper-elements#~0.5.2"
+    "iron-icons": "PolymerElements/iron-icons#^2.1.1",
+    "paper-elements": "PolymerElements/paper-elements#^1.0.7"
   },
   "overrides": {
     "webcomponentsjs": {

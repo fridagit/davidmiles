@@ -41,7 +41,7 @@ if (!isSSL() && !isLocalhost()) {
 
     <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
 
-    <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
+    <link rel="import" href="bower_components/paper-material/paper-material.html">
 
     {{#css}}
     <link rel="stylesheet" href="{{.}}">
